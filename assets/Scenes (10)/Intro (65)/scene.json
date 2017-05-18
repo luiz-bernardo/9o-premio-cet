@@ -116,7 +116,7 @@
         {
           "type": "Behavior",
           "config": {
-            "behaviorName": "LoadSceneBehavior",
+            "behaviorName": "StandardButtonBehavior",
             "propertyValues": {
               "scenetoLoad": {
                 "type": "string",

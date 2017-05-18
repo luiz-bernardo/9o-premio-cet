@@ -96,32 +96,40 @@
       "children": [],
       "components": [
         {
-          "type": "TextRenderer",
-          "config": {
-            "fontAssetId": "13",
-            "text": "VOLTAR",
-            "alignment": "right",
-            "size": 86,
-            "color": "fe040b",
-            "verticalAlignment": "center",
-            "formatVersion": 2,
-            "overrideOpacity": false,
-            "opacity": null
-          },
-          "id": "0"
-        },
-        {
           "type": "Behavior",
           "config": {
-            "behaviorName": "BackToMenuBehavior",
-            "propertyValues": {}
+            "behaviorName": "StandardButtonBehavior",
+            "propertyValues": {
+              "sceneToLoad": {
+                "type": "string",
+                "value": "Menu"
+              }
+            }
           },
           "id": "1"
+        },
+        {
+          "type": "SpriteRenderer",
+          "config": {
+            "formatVersion": 1,
+            "spriteAssetId": "24",
+            "animationId": null,
+            "horizontalFlip": false,
+            "verticalFlip": false,
+            "castShadow": false,
+            "receiveShadow": false,
+            "color": "ffffff",
+            "overrideOpacity": false,
+            "opacity": null,
+            "materialType": "basic",
+            "shaderAssetId": null
+          },
+          "id": "2"
         }
       ],
       "position": {
-        "x": 8.31888484954834,
-        "y": -4.83276891708374,
+        "x": 8.319,
+        "y": -4.733,
         "z": 5
       },
       "orientation": {

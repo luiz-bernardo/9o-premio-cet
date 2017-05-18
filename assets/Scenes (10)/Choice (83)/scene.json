@@ -180,8 +180,13 @@
                     {
                       "type": "Behavior",
                       "config": {
-                        "behaviorName": "LoadGameBehavior",
-                        "propertyValues": {}
+                        "behaviorName": "StandardButtonBehavior",
+                        "propertyValues": {
+                          "sceneToLoad": {
+                            "type": "string",
+                            "value": "Board"
+                          }
+                        }
                       },
                       "id": "1"
                     }
@@ -229,8 +234,13 @@
                 {
                   "type": "Behavior",
                   "config": {
-                    "behaviorName": "LoadGameBehavior",
-                    "propertyValues": {}
+                    "behaviorName": "StandardButtonBehavior",
+                    "propertyValues": {
+                      "sceneToLoad": {
+                        "type": "string",
+                        "value": "Board"
+                      }
+                    }
                   },
                   "id": "1"
                 }
@@ -278,8 +288,13 @@
             {
               "type": "Behavior",
               "config": {
-                "behaviorName": "LoadGameBehavior",
-                "propertyValues": {}
+                "behaviorName": "StandardButtonBehavior",
+                "propertyValues": {
+                  "sceneToLoad": {
+                    "type": "string",
+                    "value": "Board"
+                  }
+                }
               },
               "id": "1"
             }
@@ -327,8 +342,13 @@
         {
           "type": "Behavior",
           "config": {
-            "behaviorName": "LoadGameBehavior",
-            "propertyValues": {}
+            "behaviorName": "StandardButtonBehavior",
+            "propertyValues": {
+              "sceneToLoad": {
+                "type": "string",
+                "value": "Board"
+              }
+            }
           },
           "id": "1"
         }

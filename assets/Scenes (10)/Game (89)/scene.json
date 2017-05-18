@@ -23,7 +23,7 @@
             "farClippingPlane": 1000,
             "formatVersion": 1
           },
-          "id": "0"
+          "id": "2"
         }
       ],
       "position": {
@@ -54,7 +54,7 @@
         {
           "type": "SpriteRenderer",
           "config": {
-            "spriteAssetId": "11",
+            "spriteAssetId": "80",
             "animationId": null,
             "horizontalFlip": false,
             "verticalFlip": false,
@@ -73,7 +73,7 @@
       "position": {
         "x": 0,
         "y": 0,
-        "z": 2.417621658423741e-12
+        "z": 0
       },
       "orientation": {
         "x": 0,
@@ -91,136 +91,18 @@
       "prefab": null
     },
     {
-      "id": "3",
-      "name": "StartOption",
-      "children": [],
-      "components": [
-        {
-          "type": "Behavior",
-          "config": {
-            "behaviorName": "StandardButtonBehavior",
-            "propertyValues": {
-              "scenetoLoad": {
-                "type": "string",
-                "value": "Intro"
-              },
-              "sceneToLoad": {
-                "type": "string",
-                "value": "Intro"
-              }
-            }
-          },
-          "id": "1"
-        },
-        {
-          "type": "SpriteRenderer",
-          "config": {
-            "spriteAssetId": "22",
-            "animationId": null,
-            "horizontalFlip": false,
-            "verticalFlip": false,
-            "castShadow": false,
-            "receiveShadow": false,
-            "color": "ffffff",
-            "overrideOpacity": false,
-            "opacity": null,
-            "materialType": "basic",
-            "shaderAssetId": null,
-            "formatVersion": 1
-          },
-          "id": "2"
-        }
-      ],
-      "position": {
-        "x": 0,
-        "y": -2.6,
-        "z": 1
-      },
-      "orientation": {
-        "x": 0,
-        "y": 0,
-        "z": 0,
-        "w": 1
-      },
-      "scale": {
-        "x": 1,
-        "y": 1,
-        "z": 1
-      },
-      "visible": true,
-      "layer": 0,
-      "prefab": null
-    },
-    {
-      "id": "5",
-      "name": "ExitOption",
+      "id": "48",
+      "name": "Play",
       "children": [
         {
-          "id": "6",
-          "name": "AboutOption",
-          "children": [
-            {
-              "id": "8",
-              "name": "EducationalOption",
-              "children": [],
-              "components": [
-                {
-                  "type": "SpriteRenderer",
-                  "config": {
-                    "spriteAssetId": "88",
-                    "animationId": null,
-                    "horizontalFlip": false,
-                    "verticalFlip": false,
-                    "castShadow": false,
-                    "receiveShadow": false,
-                    "color": "ffffff",
-                    "overrideOpacity": false,
-                    "opacity": null,
-                    "materialType": "basic",
-                    "shaderAssetId": null,
-                    "formatVersion": 1
-                  },
-                  "id": "0"
-                },
-                {
-                  "type": "Behavior",
-                  "config": {
-                    "behaviorName": "StandardButtonBehavior",
-                    "propertyValues": {
-                      "scenetoLoad": {
-                        "type": "string",
-                        "value": "About"
-                      }
-                    }
-                  },
-                  "id": "2"
-                }
-              ],
-              "position": {
-                "x": -0.64,
-                "y": 0,
-                "z": 0
-              },
-              "orientation": {
-                "x": 0,
-                "y": 0,
-                "z": 0,
-                "w": 1
-              },
-              "scale": {
-                "x": 1,
-                "y": 1,
-                "z": 1
-              },
-              "visible": true,
-              "layer": 0,
-              "prefab": null
-            }
-          ],
+          "id": "50",
+          "name": "Stop",
+          "children": [],
           "components": [
             {
               "type": "SpriteRenderer",
               "config": {
+                "formatVersion": 1,
                 "spriteAssetId": "75",
                 "animationId": null,
                 "horizontalFlip": false,
@@ -231,31 +113,91 @@
                 "overrideOpacity": false,
                 "opacity": null,
                 "materialType": "basic",
-                "shaderAssetId": null,
-                "formatVersion": 1
+                "shaderAssetId": null
               },
               "id": "0"
             },
             {
               "type": "Behavior",
               "config": {
-                "behaviorName": "StandardButtonBehavior",
+                "behaviorName": "LoadSceneBehavior",
                 "propertyValues": {
                   "scenetoLoad": {
                     "type": "string",
-                    "value": "About"
+                    "value": "Board"
                   },
                   "sceneToLoad": {
                     "type": "string",
-                    "value": "About"
+                    "value": "Choice"
                   }
                 }
               },
-              "id": "2"
+              "id": "1"
             }
           ],
           "position": {
-            "x": -0.64,
+            "x": -1,
+            "y": 0,
+            "z": 0
+          },
+          "orientation": {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "w": 1
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          },
+          "visible": true,
+          "layer": 0,
+          "prefab": null
+        },
+        {
+          "id": "51",
+          "name": "NextTrack",
+          "children": [],
+          "components": [
+            {
+              "type": "SpriteRenderer",
+              "config": {
+                "formatVersion": 1,
+                "spriteAssetId": "75",
+                "animationId": null,
+                "horizontalFlip": false,
+                "verticalFlip": false,
+                "castShadow": false,
+                "receiveShadow": false,
+                "color": "ffffff",
+                "overrideOpacity": false,
+                "opacity": null,
+                "materialType": "basic",
+                "shaderAssetId": null
+              },
+              "id": "0"
+            },
+            {
+              "type": "Behavior",
+              "config": {
+                "behaviorName": "LoadSceneBehavior",
+                "propertyValues": {
+                  "scenetoLoad": {
+                    "type": "string",
+                    "value": "Board"
+                  },
+                  "sceneToLoad": {
+                    "type": "string",
+                    "value": "Choice"
+                  }
+                }
+              },
+              "id": "1"
+            }
+          ],
+          "position": {
+            "x": 1,
             "y": 0,
             "z": 0
           },
@@ -279,7 +221,8 @@
         {
           "type": "SpriteRenderer",
           "config": {
-            "spriteAssetId": "24",
+            "formatVersion": 1,
+            "spriteAssetId": "75",
             "animationId": null,
             "horizontalFlip": false,
             "verticalFlip": false,
@@ -289,23 +232,31 @@
             "overrideOpacity": false,
             "opacity": null,
             "materialType": "basic",
-            "shaderAssetId": null,
-            "formatVersion": 1
+            "shaderAssetId": null
           },
           "id": "0"
         },
         {
           "type": "Behavior",
           "config": {
-            "behaviorName": "ExitOptionBehavior",
-            "propertyValues": {}
+            "behaviorName": "LoadSceneBehavior",
+            "propertyValues": {
+              "scenetoLoad": {
+                "type": "string",
+                "value": "Board"
+              },
+              "sceneToLoad": {
+                "type": "string",
+                "value": "Choice"
+              }
+            }
           },
           "id": "1"
         }
       ],
       "position": {
-        "x": 6.4,
-        "y": 3.65,
+        "x": 0,
+        "y": 0,
         "z": 1
       },
       "orientation": {

@@ -1,5 +1,5 @@
 {
-  "nextEntryId": 89,
+  "nextEntryId": 90,
   "nodes": [
     {
       "id": "10",
@@ -9,6 +9,11 @@
         {
           "id": "9",
           "name": "Menu",
+          "type": "scene"
+        },
+        {
+          "id": "77",
+          "name": "About",
           "type": "scene"
         },
         {
@@ -22,8 +27,8 @@
           "type": "scene"
         },
         {
-          "id": "77",
-          "name": "About",
+          "id": "89",
+          "name": "Game",
           "type": "scene"
         },
         {
