@@ -11,7 +11,7 @@
           "config": {
             "mode": "orthographic",
             "fov": 45,
-            "orthographicScale": 10.8,
+            "orthographicScale": 7.7,
             "viewport": {
               "x": 0,
               "y": 0,
@@ -54,12 +54,12 @@
         {
           "type": "SpriteRenderer",
           "config": {
-            "spriteAssetId": "78",
+            "spriteAssetId": "80",
             "animationId": null,
             "horizontalFlip": false,
             "verticalFlip": false,
             "castShadow": false,
-            "receiveShadow": true,
+            "receiveShadow": false,
             "color": "ffffff",
             "overrideOpacity": false,
             "opacity": null,
@@ -91,120 +91,102 @@
       "prefab": null
     },
     {
-      "id": "42",
-      "name": "Back",
+      "id": "48",
+      "name": "Next",
       "children": [],
       "components": [
         {
-          "type": "TextRenderer",
+          "type": "SpriteRenderer",
           "config": {
-            "fontAssetId": "13",
-            "text": "VOLTAR",
-            "alignment": "right",
-            "size": 86,
-            "color": "fe040b",
-            "verticalAlignment": "center",
-            "formatVersion": 2,
+            "formatVersion": 1,
+            "spriteAssetId": "81",
+            "animationId": null,
+            "horizontalFlip": false,
+            "verticalFlip": false,
+            "castShadow": false,
+            "receiveShadow": false,
+            "color": "ffffff",
             "overrideOpacity": false,
-            "opacity": null
+            "opacity": null,
+            "materialType": "basic",
+            "shaderAssetId": null
           },
           "id": "0"
         },
         {
           "type": "Behavior",
           "config": {
-            "behaviorName": "BackToMenuBehavior",
+            "behaviorName": "LoadSceneBehavior",
+            "propertyValues": {
+              "scenetoLoad": {
+                "type": "string",
+                "value": "Board"
+              },
+              "sceneToLoad": {
+                "type": "string",
+                "value": "Choice"
+              }
+            }
+          },
+          "id": "1"
+        }
+      ],
+      "position": {
+        "x": 4.51,
+        "y": -2.7,
+        "z": 1
+      },
+      "orientation": {
+        "x": 0,
+        "y": 0,
+        "z": 0,
+        "w": 1
+      },
+      "scale": {
+        "x": 1,
+        "y": 1,
+        "z": 1
+      },
+      "visible": true,
+      "layer": 0,
+      "prefab": null
+    },
+    {
+      "id": "49",
+      "name": "ExitOption",
+      "children": [],
+      "components": [
+        {
+          "type": "SpriteRenderer",
+          "config": {
+            "formatVersion": 1,
+            "spriteAssetId": "24",
+            "animationId": null,
+            "horizontalFlip": false,
+            "verticalFlip": false,
+            "castShadow": false,
+            "receiveShadow": false,
+            "color": "ffffff",
+            "overrideOpacity": false,
+            "opacity": null,
+            "materialType": "basic",
+            "shaderAssetId": null
+          },
+          "id": "0"
+        },
+        {
+          "type": "Behavior",
+          "config": {
+            "behaviorName": "ExitOptionBehavior",
             "propertyValues": {}
           },
           "id": "1"
         }
       ],
       "position": {
-        "x": 8.31888484954834,
-        "y": -4.83276891708374,
-        "z": 5
-      },
-      "orientation": {
-        "x": 0,
-        "y": 0,
-        "z": 0,
-        "w": 1
-      },
-      "scale": {
-        "x": 1,
-        "y": 1,
+        "x": 6.4,
+        "y": 3.65,
         "z": 1
-      },
-      "visible": true,
-      "layer": 0,
-      "prefab": null
-    },
-    {
-      "id": "43",
-      "name": "Hyperlink1",
-      "children": [],
-      "components": [
-        {
-          "type": "TextRenderer",
-          "config": {
-            "fontAssetId": "13",
-            "text": "http://www.educacaotransito.pr.gov.br/modules/conteudo/conteudo.php?conte\nudo=113",
-            "alignment": "left",
-            "size": 72,
-            "color": "0000ff",
-            "verticalAlignment": "center",
-            "formatVersion": 2,
-            "overrideOpacity": false,
-            "opacity": null
-          },
-          "id": "0"
-        }
-      ],
-      "position": {
-        "x": -2.087,
-        "y": -1.883,
-        "z": 9
-      },
-      "orientation": {
-        "x": 0,
-        "y": 0,
-        "z": 0,
-        "w": 1
-      },
-      "scale": {
-        "x": 1,
-        "y": 1,
-        "z": 1
-      },
-      "visible": true,
-      "layer": 0,
-      "prefab": null
-    },
-    {
-      "id": "44",
-      "name": "Hyperlink2",
-      "children": [],
-      "components": [
-        {
-          "type": "TextRenderer",
-          "config": {
-            "fontAssetId": "13",
-            "text": "http://portaldoprofessor.mec.gov.br/fichaTecnicaAula.html?aula=26612",
-            "alignment": "left",
-            "size": 72,
-            "color": "0000ff",
-            "verticalAlignment": "center",
-            "formatVersion": 2,
-            "overrideOpacity": false,
-            "opacity": null
-          },
-          "id": "0"
-        }
-      ],
-      "position": {
-        "x": -2.087,
-        "y": -2.999,
-        "z": 9
       },
       "orientation": {
         "x": 0,

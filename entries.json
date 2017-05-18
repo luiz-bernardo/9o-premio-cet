@@ -1,5 +1,5 @@
 {
-  "nextEntryId": 79,
+  "nextEntryId": 89,
   "nodes": [
     {
       "id": "10",
@@ -13,17 +13,12 @@
         },
         {
           "id": "65",
-          "name": "Intro_1",
+          "name": "Intro",
           "type": "scene"
         },
         {
-          "id": "69",
-          "name": "Intro_2",
-          "type": "scene"
-        },
-        {
-          "id": "73",
-          "name": "Educational",
+          "id": "83",
+          "name": "Choice",
           "type": "scene"
         },
         {
@@ -65,12 +60,7 @@
         },
         {
           "id": "51",
-          "name": "Menu",
-          "type": "script"
-        },
-        {
-          "id": "70",
-          "name": "Intro",
+          "name": "Flow",
           "type": "script"
         },
         {
@@ -92,6 +82,11 @@
           "id": "46",
           "name": "Questions",
           "type": "script"
+        },
+        {
+          "id": "79",
+          "name": "Leftovers",
+          "type": "script"
         }
       ]
     },
@@ -111,18 +106,8 @@
           "type": "sprite"
         },
         {
-          "id": "23",
-          "name": "EducationalButton",
-          "type": "sprite"
-        },
-        {
           "id": "24",
           "name": "ExitButton",
-          "type": "sprite"
-        },
-        {
-          "id": "71",
-          "name": "EducationalContent",
           "type": "sprite"
         },
         {
@@ -134,17 +119,45 @@
           "id": "78",
           "name": "AboutContent",
           "type": "sprite"
-        }
-      ]
-    },
-    {
-      "id": "66",
-      "name": "IntroSprites",
-      "type": null,
-      "children": [
+        },
         {
-          "id": "68",
-          "name": "Family",
+          "id": "88",
+          "name": "EducationalButton",
+          "type": "sprite"
+        },
+        {
+          "id": "80",
+          "name": "IntroScreen",
+          "type": "sprite"
+        },
+        {
+          "id": "81",
+          "name": "NextButton",
+          "type": "sprite"
+        },
+        {
+          "id": "82",
+          "name": "ChoiceScreen",
+          "type": "sprite"
+        },
+        {
+          "id": "84",
+          "name": "CyclistOption",
+          "type": "sprite"
+        },
+        {
+          "id": "85",
+          "name": "PedestrianOption",
+          "type": "sprite"
+        },
+        {
+          "id": "86",
+          "name": "MotorcyclistOption",
+          "type": "sprite"
+        },
+        {
+          "id": "87",
+          "name": "DriverOption",
           "type": "sprite"
         }
       ]

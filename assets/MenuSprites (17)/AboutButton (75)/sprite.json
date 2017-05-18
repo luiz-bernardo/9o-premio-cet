@@ -11,12 +11,12 @@
   "alphaTest": 0.1,
   "frameOrder": "rows",
   "grid": {
-    "width": 605,
-    "height": 87
+    "width": 51,
+    "height": 47
   },
   "origin": {
     "x": 0.5,
-    "y": 0.5
+    "y": 1
   },
   "animations": [
     {

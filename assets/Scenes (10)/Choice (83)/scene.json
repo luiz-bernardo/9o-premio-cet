@@ -23,7 +23,7 @@
             "farClippingPlane": 1000,
             "formatVersion": 1
           },
-          "id": "0"
+          "id": "2"
         }
       ],
       "position": {
@@ -54,7 +54,7 @@
         {
           "type": "SpriteRenderer",
           "config": {
-            "spriteAssetId": "11",
+            "spriteAssetId": "82",
             "animationId": null,
             "horizontalFlip": false,
             "verticalFlip": false,
@@ -73,7 +73,7 @@
       "position": {
         "x": 0,
         "y": 0,
-        "z": 2.417621658423741e-12
+        "z": 0
       },
       "orientation": {
         "x": 0,
@@ -91,31 +91,15 @@
       "prefab": null
     },
     {
-      "id": "3",
-      "name": "StartOption",
+      "id": "49",
+      "name": "ExitOption",
       "children": [],
       "components": [
         {
-          "type": "Behavior",
-          "config": {
-            "behaviorName": "LoadSceneBehavior",
-            "propertyValues": {
-              "scenetoLoad": {
-                "type": "string",
-                "value": "Intro"
-              },
-              "sceneToLoad": {
-                "type": "string",
-                "value": "Intro"
-              }
-            }
-          },
-          "id": "1"
-        },
-        {
           "type": "SpriteRenderer",
           "config": {
-            "spriteAssetId": "22",
+            "formatVersion": 1,
+            "spriteAssetId": "24",
             "animationId": null,
             "horizontalFlip": false,
             "verticalFlip": false,
@@ -125,15 +109,22 @@
             "overrideOpacity": false,
             "opacity": null,
             "materialType": "basic",
-            "shaderAssetId": null,
-            "formatVersion": 1
+            "shaderAssetId": null
           },
-          "id": "2"
+          "id": "0"
+        },
+        {
+          "type": "Behavior",
+          "config": {
+            "behaviorName": "ExitOptionBehavior",
+            "propertyValues": {}
+          },
+          "id": "1"
         }
       ],
       "position": {
-        "x": 0,
-        "y": -2.6,
+        "x": 6.4,
+        "y": 3.65,
         "z": 1
       },
       "orientation": {
@@ -152,22 +143,76 @@
       "prefab": null
     },
     {
-      "id": "5",
-      "name": "ExitOption",
+      "id": "50",
+      "name": "Driver",
       "children": [
         {
-          "id": "6",
-          "name": "AboutOption",
+          "id": "54",
+          "name": "Cyclist",
           "children": [
             {
-              "id": "8",
-              "name": "EducationalOption",
-              "children": [],
+              "id": "55",
+              "name": "Pedestrian",
+              "children": [
+                {
+                  "id": "56",
+                  "name": "Motorcyclist",
+                  "children": [],
+                  "components": [
+                    {
+                      "type": "SpriteRenderer",
+                      "config": {
+                        "formatVersion": 1,
+                        "spriteAssetId": "86",
+                        "animationId": null,
+                        "horizontalFlip": false,
+                        "verticalFlip": false,
+                        "castShadow": false,
+                        "receiveShadow": false,
+                        "color": "ffffff",
+                        "overrideOpacity": false,
+                        "opacity": null,
+                        "materialType": "basic",
+                        "shaderAssetId": null
+                      },
+                      "id": "0"
+                    },
+                    {
+                      "type": "Behavior",
+                      "config": {
+                        "behaviorName": "LoadGameBehavior",
+                        "propertyValues": {}
+                      },
+                      "id": "1"
+                    }
+                  ],
+                  "position": {
+                    "x": 3.1,
+                    "y": 0,
+                    "z": 0
+                  },
+                  "orientation": {
+                    "x": 0,
+                    "y": 0,
+                    "z": 0,
+                    "w": 1
+                  },
+                  "scale": {
+                    "x": 1,
+                    "y": 1,
+                    "z": 1
+                  },
+                  "visible": true,
+                  "layer": 0,
+                  "prefab": null
+                }
+              ],
               "components": [
                 {
                   "type": "SpriteRenderer",
                   "config": {
-                    "spriteAssetId": "88",
+                    "formatVersion": 1,
+                    "spriteAssetId": "85",
                     "animationId": null,
                     "horizontalFlip": false,
                     "verticalFlip": false,
@@ -177,27 +222,21 @@
                     "overrideOpacity": false,
                     "opacity": null,
                     "materialType": "basic",
-                    "shaderAssetId": null,
-                    "formatVersion": 1
+                    "shaderAssetId": null
                   },
                   "id": "0"
                 },
                 {
                   "type": "Behavior",
                   "config": {
-                    "behaviorName": "LoadSceneBehavior",
-                    "propertyValues": {
-                      "scenetoLoad": {
-                        "type": "string",
-                        "value": "About"
-                      }
-                    }
+                    "behaviorName": "LoadGameBehavior",
+                    "propertyValues": {}
                   },
-                  "id": "2"
+                  "id": "1"
                 }
               ],
               "position": {
-                "x": -0.64,
+                "x": 3.1,
                 "y": 0,
                 "z": 0
               },
@@ -221,7 +260,8 @@
             {
               "type": "SpriteRenderer",
               "config": {
-                "spriteAssetId": "75",
+                "formatVersion": 1,
+                "spriteAssetId": "84",
                 "animationId": null,
                 "horizontalFlip": false,
                 "verticalFlip": false,
@@ -231,31 +271,21 @@
                 "overrideOpacity": false,
                 "opacity": null,
                 "materialType": "basic",
-                "shaderAssetId": null,
-                "formatVersion": 1
+                "shaderAssetId": null
               },
               "id": "0"
             },
             {
               "type": "Behavior",
               "config": {
-                "behaviorName": "LoadSceneBehavior",
-                "propertyValues": {
-                  "scenetoLoad": {
-                    "type": "string",
-                    "value": "About"
-                  },
-                  "sceneToLoad": {
-                    "type": "string",
-                    "value": "About"
-                  }
-                }
+                "behaviorName": "LoadGameBehavior",
+                "propertyValues": {}
               },
-              "id": "2"
+              "id": "1"
             }
           ],
           "position": {
-            "x": -0.64,
+            "x": 3.1,
             "y": 0,
             "z": 0
           },
@@ -279,7 +309,8 @@
         {
           "type": "SpriteRenderer",
           "config": {
-            "spriteAssetId": "24",
+            "formatVersion": 1,
+            "spriteAssetId": "87",
             "animationId": null,
             "horizontalFlip": false,
             "verticalFlip": false,
@@ -289,23 +320,22 @@
             "overrideOpacity": false,
             "opacity": null,
             "materialType": "basic",
-            "shaderAssetId": null,
-            "formatVersion": 1
+            "shaderAssetId": null
           },
           "id": "0"
         },
         {
           "type": "Behavior",
           "config": {
-            "behaviorName": "ExitOptionBehavior",
+            "behaviorName": "LoadGameBehavior",
             "propertyValues": {}
           },
           "id": "1"
         }
       ],
       "position": {
-        "x": 6.4,
-        "y": 3.65,
+        "x": -4.66,
+        "y": -0.9,
         "z": 1
       },
       "orientation": {

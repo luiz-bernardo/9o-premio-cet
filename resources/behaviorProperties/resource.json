@@ -88,9 +88,50 @@
         }
       ]
     },
-    "slideNextBehavior": {
+    "ExitOptionBehavior": {
       "scriptId": "51",
-      "line": 91,
+      "line": 94,
+      "parentBehavior": null,
+      "properties": [
+        {
+          "name": "isHover",
+          "type": "boolean"
+        }
+      ]
+    },
+    "BackToMenuBehavior": {
+      "scriptId": "51",
+      "line": 138,
+      "parentBehavior": null,
+      "properties": [
+        {
+          "name": "isHover",
+          "type": "boolean"
+        }
+      ]
+    },
+    "LoadSceneBehavior": {
+      "scriptId": "51",
+      "line": 47,
+      "parentBehavior": null,
+      "properties": [
+        {
+          "name": "isHover",
+          "type": "boolean"
+        },
+        {
+          "name": "sound",
+          "type": "boolean"
+        },
+        {
+          "name": "sceneToLoad",
+          "type": "string"
+        }
+      ]
+    },
+    "slideNextBehavior": {
+      "scriptId": "79",
+      "line": 3,
       "parentBehavior": null,
       "properties": [
         {
@@ -103,30 +144,8 @@
         }
       ]
     },
-    "ExitOptionBehavior": {
+    "LoadGameBehavior": {
       "scriptId": "51",
-      "line": 48,
-      "parentBehavior": null,
-      "properties": [
-        {
-          "name": "isHover",
-          "type": "boolean"
-        }
-      ]
-    },
-    "backToMenuBehavior": {
-      "scriptId": "51",
-      "line": 157,
-      "parentBehavior": null,
-      "properties": [
-        {
-          "name": "isHover",
-          "type": "boolean"
-        }
-      ]
-    },
-    "introContinueBehavior": {
-      "scriptId": "70",
       "line": 0,
       "parentBehavior": null,
       "properties": [
@@ -135,22 +154,11 @@
           "type": "boolean"
         },
         {
-          "name": "scenetoLoad",
-          "type": "string"
-        }
-      ]
-    },
-    "StandardOptionBehavior": {
-      "scriptId": "51",
-      "line": 3,
-      "parentBehavior": null,
-      "properties": [
-        {
-          "name": "isHover",
+          "name": "sound",
           "type": "boolean"
         },
         {
-          "name": "scenetoLoad",
+          "name": "sceneToLoad",
           "type": "string"
         }
       ]
