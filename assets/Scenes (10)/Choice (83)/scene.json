@@ -346,7 +346,7 @@
             "propertyValues": {
               "sceneToLoad": {
                 "type": "string",
-                "value": "Board"
+                "value": "Game"
               }
             }
           },

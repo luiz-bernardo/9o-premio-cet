@@ -120,15 +120,15 @@
             {
               "type": "Behavior",
               "config": {
-                "behaviorName": "LoadSceneBehavior",
+                "behaviorName": "SoundButtonBehavior",
                 "propertyValues": {
                   "scenetoLoad": {
                     "type": "string",
                     "value": "Board"
                   },
-                  "sceneToLoad": {
-                    "type": "string",
-                    "value": "Choice"
+                  "isPreviousButton": {
+                    "type": "boolean",
+                    "value": true
                   }
                 }
               },
@@ -181,15 +181,15 @@
             {
               "type": "Behavior",
               "config": {
-                "behaviorName": "LoadSceneBehavior",
+                "behaviorName": "SoundButtonBehavior",
                 "propertyValues": {
                   "scenetoLoad": {
                     "type": "string",
                     "value": "Board"
                   },
-                  "sceneToLoad": {
-                    "type": "string",
-                    "value": "Choice"
+                  "isNextButton": {
+                    "type": "boolean",
+                    "value": true
                   }
                 }
               },
@@ -239,15 +239,15 @@
         {
           "type": "Behavior",
           "config": {
-            "behaviorName": "LoadSceneBehavior",
+            "behaviorName": "SoundButtonBehavior",
             "propertyValues": {
               "scenetoLoad": {
                 "type": "string",
                 "value": "Board"
               },
-              "sceneToLoad": {
-                "type": "string",
-                "value": "Choice"
+              "isPlayButton": {
+                "type": "boolean",
+                "value": true
               }
             }
           },

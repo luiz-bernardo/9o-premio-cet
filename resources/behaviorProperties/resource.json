@@ -124,11 +124,11 @@
           "type": "boolean"
         },
         {
-          "name": "turnOffSound",
+          "name": "turnOffOnClickSound",
           "type": "boolean"
         },
         {
-          "name": "soundToPlay",
+          "name": "soundToPlayOnClick",
           "type": "string"
         },
         {
@@ -138,6 +138,29 @@
         {
           "name": "sceneToLoad",
           "type": "string"
+        }
+      ]
+    },
+    "SoundButtonBehavior": {
+      "scriptId": "92",
+      "line": 6,
+      "parentBehavior": null,
+      "properties": [
+        {
+          "name": "isHover",
+          "type": "boolean"
+        },
+        {
+          "name": "isPlayButton",
+          "type": "boolean"
+        },
+        {
+          "name": "isNextButton",
+          "type": "boolean"
+        },
+        {
+          "name": "isPreviousButton",
+          "type": "boolean"
         }
       ]
     }

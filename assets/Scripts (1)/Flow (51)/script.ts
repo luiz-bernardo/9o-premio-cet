@@ -1,8 +1,8 @@
 class StandardButtonBehavior extends Sup.Behavior {
   // flag to tell when the mouse hover the button
   isHover : boolean = false;
-  turnOffSound : boolean = false;
-  soundToPlay: string = "Toc";
+  turnOffOnClickSound : boolean = false;
+  soundToPlayOnClick: string = "Toc";
   turnOffLoadScene: boolean = false;
   sceneToLoad: string = "Menu";
 
@@ -12,8 +12,8 @@ class StandardButtonBehavior extends Sup.Behavior {
 
   mouse(action) {
     if(action == "click"){
-      if (!this.turnOffSound){
-        Sup.Audio.playSound("Sounds/"+this.soundToPlay); 
+      if (!this.turnOffOnClickSound){
+        Sup.Audio.playSound("Sounds/"+this.soundToPlayOnClick); 
       }
       if (!this.turnOffLoadScene){
         Sup.loadScene("Scenes/"+this.sceneToLoad);
