@@ -160,8 +160,9 @@ namespace Questions {
   
   
   export function solveQuestion(){
+
     Sup.getActor("QuestionDialog").getBehavior(QuestionBehavior).destroy();
-    //Sup.getActor("QuestionDialog").getChild("Next").getBehavior(questionDialogButtonBehavior).setClickToBoard();
+      
     //right answer
     if(selectedOption === rightOption){
       Sup.getActor("QuestionDialog").getChild("HeaderQuestion").spriteRenderer.setAnimation("right");
@@ -256,134 +257,6 @@ class QuestionBehavior extends Sup.Behavior {
   }
 }
 Sup.registerBehavior(QuestionBehavior);
-
-
-
-class gameoverDialogAgainBehavior extends Sup.Behavior {
-  // flag to tell when the mouse hover the button
-  isHover : boolean = false;
-
-  awake() {
-    ray = new Sup.Math.Ray(this.actor.getPosition(), new Sup.Math.Vector3(0, 0, -1));
-  }
-
-  mouse(action) {
-    if(action == "click"){
-      Game.startGame();
-    }
-    else if(action == "hover"){
-      this.actor.textRenderer.setColor(ColorTextLightGreen); 
-    }
-    else if(action == "unhover"){
-      this.actor.textRenderer.setColor(ColorTextGreen);
-    }
-  }
-
-  update() {
-    if(this.actor.getVisible()){
-      ray.setFromCamera(Sup.getActor("Camera").camera, Sup.Input.getMousePosition());
-
-      if(ray.intersectActor(this.actor, false).length > 0){
-        if(!this.isHover){
-          this.mouse("hover");
-          this.isHover = true;
-        }
-        if(Sup.Input.wasMouseButtonJustPressed(0)){
-          this.mouse("click")
-        }
-      }
-      else if(this.isHover){
-        this.isHover = false;
-        this.mouse("unhover")
-      }
-    }
-  }
-}
-Sup.registerBehavior(gameoverDialogAgainBehavior);
-
-class gameoverDialogExitBehavior extends Sup.Behavior {
-  // flag to tell when the mouse hover the button
-  isHover : boolean = false;
-
-  awake() {
-    ray = new Sup.Math.Ray(this.actor.getPosition(), new Sup.Math.Vector3(0, 0, -1));
-  }
-
-  mouse(action) {
-    if(action == "click"){
-      Game.backToMenu();
-    }
-    else if(action == "hover"){
-      this.actor.textRenderer.setColor(ColorTextLightGreen); 
-    }
-    else if(action == "unhover"){
-      this.actor.textRenderer.setColor(ColorTextGreen);
-    }
-  }
-
-  update() {
-    if(this.actor.getVisible()){
-      ray.setFromCamera(Sup.getActor("Camera").camera, Sup.Input.getMousePosition());
-
-      if(ray.intersectActor(this.actor, false).length > 0){
-        if(!this.isHover){
-          this.mouse("hover");
-          this.isHover = true;
-        }
-        if(Sup.Input.wasMouseButtonJustPressed(0)){
-          this.mouse("click")
-        }
-      }
-      else if(this.isHover){
-        this.isHover = false;
-        this.mouse("unhover")
-      }
-    }
-  }
-}
-Sup.registerBehavior(gameoverDialogExitBehavior);
-
-class arriveDialogContinueBehavior extends Sup.Behavior {
-  // flag to tell when the mouse hover the button
-  isHover : boolean = false;
-
-  awake() {
-    ray = new Sup.Math.Ray(this.actor.getPosition(), new Sup.Math.Vector3(0, 0, -1));
-  }
-
-  mouse(action) {
-    if(action == "click"){
-      Sup.getActor("SuccessDialog").setVisible(false);
-    }
-    else if(action == "hover"){
-      this.actor.textRenderer.setColor(ColorTextLightGreen); 
-    }
-    else if(action == "unhover"){
-      this.actor.textRenderer.setColor(ColorTextGreen);
-    }
-  }
-
-  update() {
-    if(Sup.getActor("SuccessDialog").getVisible()){
-      ray.setFromCamera(Sup.getActor("Camera").camera, Sup.Input.getMousePosition());
-
-      if(ray.intersectActor(this.actor, false).length > 0){
-        if(!this.isHover){
-          this.mouse("hover");
-          this.isHover = true;
-        }
-        if(Sup.Input.wasMouseButtonJustPressed(0)){
-          this.mouse("click")
-        }
-      }
-      else if(this.isHover){
-        this.isHover = false;
-        this.mouse("unhover")
-      }
-    }
-  }
-}
-Sup.registerBehavior(arriveDialogContinueBehavior);
 
 
 class TextBehavior extends Sup.Behavior {

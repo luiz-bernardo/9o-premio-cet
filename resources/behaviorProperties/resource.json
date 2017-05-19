@@ -11,21 +11,6 @@
         }
       ]
     },
-    "slideNextBehavior": {
-      "scriptId": "79",
-      "line": 3,
-      "parentBehavior": null,
-      "properties": [
-        {
-          "name": "isHover",
-          "type": "boolean"
-        },
-        {
-          "name": "next",
-          "type": "boolean"
-        }
-      ]
-    },
     "StandardButtonBehavior": {
       "scriptId": "51",
       "line": 86,
@@ -78,46 +63,13 @@
     },
     "QuestionBehavior": {
       "scriptId": "54",
-      "line": 189,
+      "line": 190,
       "parentBehavior": null,
       "properties": []
     },
-    "gameoverDialogAgainBehavior": {
-      "scriptId": "54",
-      "line": 261,
-      "parentBehavior": null,
-      "properties": [
-        {
-          "name": "isHover",
-          "type": "boolean"
-        }
-      ]
-    },
-    "gameoverDialogExitBehavior": {
-      "scriptId": "54",
-      "line": 303,
-      "parentBehavior": null,
-      "properties": [
-        {
-          "name": "isHover",
-          "type": "boolean"
-        }
-      ]
-    },
-    "arriveDialogContinueBehavior": {
-      "scriptId": "54",
-      "line": 345,
-      "parentBehavior": null,
-      "properties": [
-        {
-          "name": "isHover",
-          "type": "boolean"
-        }
-      ]
-    },
     "TextBehavior": {
       "scriptId": "54",
-      "line": 388,
+      "line": 261,
       "parentBehavior": null,
       "properties": [
         {
