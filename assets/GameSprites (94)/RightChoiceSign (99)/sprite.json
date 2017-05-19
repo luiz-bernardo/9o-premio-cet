@@ -11,29 +11,14 @@
   "alphaTest": 0.6,
   "frameOrder": "rows",
   "grid": {
-    "width": 51,
-    "height": 47
+    "width": 271,
+    "height": 1144
   },
   "origin": {
     "x": 0.5,
-    "y": 1
+    "y": 0
   },
-  "animations": [
-    {
-      "id": "0",
-      "name": "unhover",
-      "startFrameIndex": 0,
-      "endFrameIndex": 0,
-      "speed": 1
-    },
-    {
-      "id": "1",
-      "name": "hover",
-      "startFrameIndex": 1,
-      "endFrameIndex": 1,
-      "speed": 1
-    }
-  ],
+  "animations": [],
   "mapSlots": {
     "map": "map",
     "light": null,

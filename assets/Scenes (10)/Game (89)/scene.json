@@ -54,7 +54,7 @@
         {
           "type": "SpriteRenderer",
           "config": {
-            "spriteAssetId": "80",
+            "spriteAssetId": "98",
             "animationId": null,
             "horizontalFlip": false,
             "verticalFlip": false,
@@ -91,19 +91,81 @@
       "prefab": null
     },
     {
-      "id": "48",
-      "name": "Play",
+      "id": "50",
+      "name": "PreviousTrack",
       "children": [
         {
-          "id": "50",
-          "name": "Stop",
-          "children": [],
+          "id": "48",
+          "name": "PlayTrack",
+          "children": [
+            {
+              "id": "51",
+              "name": "NextTrack",
+              "children": [],
+              "components": [
+                {
+                  "type": "SpriteRenderer",
+                  "config": {
+                    "formatVersion": 1,
+                    "spriteAssetId": "102",
+                    "animationId": null,
+                    "horizontalFlip": false,
+                    "verticalFlip": false,
+                    "castShadow": false,
+                    "receiveShadow": false,
+                    "color": "ffffff",
+                    "overrideOpacity": false,
+                    "opacity": null,
+                    "materialType": "basic",
+                    "shaderAssetId": null
+                  },
+                  "id": "0"
+                },
+                {
+                  "type": "Behavior",
+                  "config": {
+                    "behaviorName": "SoundButtonBehavior",
+                    "propertyValues": {
+                      "scenetoLoad": {
+                        "type": "string",
+                        "value": "Board"
+                      },
+                      "isNextButton": {
+                        "type": "boolean",
+                        "value": true
+                      }
+                    }
+                  },
+                  "id": "1"
+                }
+              ],
+              "position": {
+                "x": 0.67,
+                "y": 0,
+                "z": 0
+              },
+              "orientation": {
+                "x": 0,
+                "y": 0,
+                "z": 0,
+                "w": 1
+              },
+              "scale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+              },
+              "visible": true,
+              "layer": 0,
+              "prefab": null
+            }
+          ],
           "components": [
             {
               "type": "SpriteRenderer",
               "config": {
                 "formatVersion": 1,
-                "spriteAssetId": "75",
+                "spriteAssetId": "100",
                 "animationId": null,
                 "horizontalFlip": false,
                 "verticalFlip": false,
@@ -126,7 +188,7 @@
                     "type": "string",
                     "value": "Board"
                   },
-                  "isPreviousButton": {
+                  "isPlayButton": {
                     "type": "boolean",
                     "value": true
                   }
@@ -136,68 +198,7 @@
             }
           ],
           "position": {
-            "x": -1,
-            "y": 0,
-            "z": 0
-          },
-          "orientation": {
-            "x": 0,
-            "y": 0,
-            "z": 0,
-            "w": 1
-          },
-          "scale": {
-            "x": 1,
-            "y": 1,
-            "z": 1
-          },
-          "visible": true,
-          "layer": 0,
-          "prefab": null
-        },
-        {
-          "id": "51",
-          "name": "NextTrack",
-          "children": [],
-          "components": [
-            {
-              "type": "SpriteRenderer",
-              "config": {
-                "formatVersion": 1,
-                "spriteAssetId": "75",
-                "animationId": null,
-                "horizontalFlip": false,
-                "verticalFlip": false,
-                "castShadow": false,
-                "receiveShadow": false,
-                "color": "ffffff",
-                "overrideOpacity": false,
-                "opacity": null,
-                "materialType": "basic",
-                "shaderAssetId": null
-              },
-              "id": "0"
-            },
-            {
-              "type": "Behavior",
-              "config": {
-                "behaviorName": "SoundButtonBehavior",
-                "propertyValues": {
-                  "scenetoLoad": {
-                    "type": "string",
-                    "value": "Board"
-                  },
-                  "isNextButton": {
-                    "type": "boolean",
-                    "value": true
-                  }
-                }
-              },
-              "id": "1"
-            }
-          ],
-          "position": {
-            "x": 1,
+            "x": 0.67,
             "y": 0,
             "z": 0
           },
@@ -222,7 +223,7 @@
           "type": "SpriteRenderer",
           "config": {
             "formatVersion": 1,
-            "spriteAssetId": "75",
+            "spriteAssetId": "103",
             "animationId": null,
             "horizontalFlip": false,
             "verticalFlip": false,
@@ -245,7 +246,7 @@
                 "type": "string",
                 "value": "Board"
               },
-              "isPlayButton": {
+              "isPreviousButton": {
                 "type": "boolean",
                 "value": true
               }
@@ -255,9 +256,193 @@
         }
       ],
       "position": {
+        "x": -6.3,
+        "y": -3.43,
+        "z": 1
+      },
+      "orientation": {
         "x": 0,
         "y": 0,
+        "z": 0,
+        "w": 1
+      },
+      "scale": {
+        "x": 1,
+        "y": 1,
         "z": 1
+      },
+      "visible": true,
+      "layer": 0,
+      "prefab": null
+    },
+    {
+      "id": "55",
+      "name": "QuestionSign",
+      "children": [],
+      "components": [
+        {
+          "type": "SpriteRenderer",
+          "config": {
+            "formatVersion": 1,
+            "spriteAssetId": "104",
+            "animationId": null,
+            "horizontalFlip": false,
+            "verticalFlip": false,
+            "castShadow": false,
+            "receiveShadow": false,
+            "color": "ffffff",
+            "overrideOpacity": false,
+            "opacity": null,
+            "materialType": "basic",
+            "shaderAssetId": null
+          },
+          "id": "0"
+        },
+        {
+          "type": "Behavior",
+          "config": {
+            "behaviorName": "SignBehavior",
+            "propertyValues": {}
+          },
+          "id": "2"
+        }
+      ],
+      "position": {
+        "x": 8,
+        "y": -14,
+        "z": 2
+      },
+      "orientation": {
+        "x": 0,
+        "y": 0,
+        "z": -0.17364817766693033,
+        "w": 0.984807753012208
+      },
+      "scale": {
+        "x": 1,
+        "y": 1,
+        "z": 1
+      },
+      "visible": true,
+      "layer": 0,
+      "prefab": null
+    },
+    {
+      "id": "52",
+      "name": "RightSign",
+      "children": [],
+      "components": [
+        {
+          "type": "SpriteRenderer",
+          "config": {
+            "formatVersion": 1,
+            "spriteAssetId": "99",
+            "animationId": null,
+            "horizontalFlip": false,
+            "verticalFlip": false,
+            "castShadow": false,
+            "receiveShadow": false,
+            "color": "ffffff",
+            "overrideOpacity": false,
+            "opacity": null,
+            "materialType": "basic",
+            "shaderAssetId": null
+          },
+          "id": "0"
+        }
+      ],
+      "position": {
+        "x": -2,
+        "y": -8.75,
+        "z": 4
+      },
+      "orientation": {
+        "x": 0,
+        "y": 0,
+        "z": -0.573576436351046,
+        "w": 0.8191520442889918
+      },
+      "scale": {
+        "x": 1,
+        "y": 1,
+        "z": 1
+      },
+      "visible": true,
+      "layer": 0,
+      "prefab": null
+    },
+    {
+      "id": "53",
+      "name": "WrongSign",
+      "children": [],
+      "components": [
+        {
+          "type": "SpriteRenderer",
+          "config": {
+            "formatVersion": 1,
+            "spriteAssetId": "96",
+            "animationId": null,
+            "horizontalFlip": false,
+            "verticalFlip": false,
+            "castShadow": false,
+            "receiveShadow": false,
+            "color": "ffffff",
+            "overrideOpacity": false,
+            "opacity": null,
+            "materialType": "basic",
+            "shaderAssetId": null
+          },
+          "id": "0"
+        }
+      ],
+      "position": {
+        "x": 3.4,
+        "y": -6.45,
+        "z": 4
+      },
+      "orientation": {
+        "x": 0,
+        "y": 0,
+        "z": -0.4617486132350339,
+        "w": 0.8870108331782217
+      },
+      "scale": {
+        "x": 1,
+        "y": 1,
+        "z": 1
+      },
+      "visible": true,
+      "layer": 0,
+      "prefab": null
+    },
+    {
+      "id": "54",
+      "name": "reference",
+      "children": [],
+      "components": [
+        {
+          "type": "SpriteRenderer",
+          "config": {
+            "formatVersion": 1,
+            "spriteAssetId": "22",
+            "animationId": null,
+            "horizontalFlip": false,
+            "verticalFlip": false,
+            "castShadow": false,
+            "receiveShadow": false,
+            "color": "ffffff",
+            "overrideOpacity": false,
+            "opacity": null,
+            "materialType": "basic",
+            "shaderAssetId": null
+          },
+          "id": "0"
+        }
+      ],
+      "position": {
+        "x": 0,
+        "y": 0,
+        "z": 10
       },
       "orientation": {
         "x": 0,

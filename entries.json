@@ -1,5 +1,5 @@
 {
-  "nextEntryId": 94,
+  "nextEntryId": 105,
   "nodes": [
     {
       "id": "10",
@@ -168,6 +168,53 @@
         {
           "id": "87",
           "name": "DriverOption",
+          "type": "sprite"
+        }
+      ]
+    },
+    {
+      "id": "94",
+      "name": "GameSprites",
+      "type": null,
+      "children": [
+        {
+          "id": "98",
+          "name": "Background",
+          "type": "sprite"
+        },
+        {
+          "id": "104",
+          "name": "QuestionSign",
+          "type": "sprite"
+        },
+        {
+          "id": "96",
+          "name": "WrongChoiceSign",
+          "type": "sprite"
+        },
+        {
+          "id": "99",
+          "name": "RightChoiceSign",
+          "type": "sprite"
+        },
+        {
+          "id": "100",
+          "name": "PlayButton",
+          "type": "sprite"
+        },
+        {
+          "id": "101",
+          "name": "PauseButton",
+          "type": "sprite"
+        },
+        {
+          "id": "102",
+          "name": "NextTrackButton",
+          "type": "sprite"
+        },
+        {
+          "id": "103",
+          "name": "PreviousTrackButton",
           "type": "sprite"
         }
       ]

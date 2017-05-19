@@ -27,23 +27,6 @@
       "parentBehavior": null,
       "properties": []
     },
-    "GameBehavior": {
-      "scriptId": "55",
-      "line": 47,
-      "parentBehavior": null,
-      "properties": []
-    },
-    "ShowBehavior": {
-      "scriptId": "55",
-      "line": 61,
-      "parentBehavior": null,
-      "properties": [
-        {
-          "name": "orderToShow",
-          "type": "number"
-        }
-      ]
-    },
     "questionDialogButtonBehavior": {
       "scriptId": "54",
       "line": 174,
@@ -90,7 +73,7 @@
     },
     "ExitOptionBehavior": {
       "scriptId": "51",
-      "line": 51,
+      "line": 138,
       "parentBehavior": null,
       "properties": [
         {
@@ -116,7 +99,7 @@
     },
     "StandardButtonBehavior": {
       "scriptId": "51",
-      "line": 0,
+      "line": 87,
       "parentBehavior": null,
       "properties": [
         {
@@ -142,8 +125,8 @@
       ]
     },
     "SoundButtonBehavior": {
-      "scriptId": "92",
-      "line": 6,
+      "scriptId": "51",
+      "line": 5,
       "parentBehavior": null,
       "properties": [
         {
@@ -161,6 +144,29 @@
         {
           "name": "isPreviousButton",
           "type": "boolean"
+        }
+      ]
+    },
+    "SignBehavior": {
+      "scriptId": "55",
+      "line": 18,
+      "parentBehavior": null,
+      "properties": [
+        {
+          "name": "time",
+          "type": "number"
+        },
+        {
+          "name": "degrees",
+          "type": "number"
+        },
+        {
+          "name": "moveX",
+          "type": "boolean"
+        },
+        {
+          "name": "endingX",
+          "type": "number"
         }
       ]
     }
