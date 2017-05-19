@@ -1,4 +1,104 @@
 
+class NextSignBehavior extends Sup.Behavior {
+  // flag to tell when the mouse hover the button
+  isHover : boolean = false;
+
+  awake() {
+    ray = new Sup.Math.Ray(this.actor.getPosition(), new Sup.Math.Vector3(0, 0, -1));
+      
+    //#############Just to have something to initialize the motion right now
+    Game.startGame();
+      
+  }
+
+  mouse(action) {
+    if(action == "click"){
+
+        //##########Need some code to go to the next question
+    
+    }
+    else if(action == "hover"){
+      this.actor.spriteRenderer.setAnimation("hover");
+    }
+    else if(action == "unhover"){
+      this.actor.spriteRenderer.setAnimation("unhover");
+    }
+  }
+
+  update() {
+    ray.setFromCamera(Sup.getActor("Camera").camera, Sup.Input.getMousePosition());
+
+    if(ray.intersectActor(this.actor, false).length > 0){
+      if(!this.isHover){
+        this.mouse("hover");
+        this.isHover = true;
+      }
+      if(Sup.Input.wasMouseButtonJustPressed(0)){
+        this.mouse("click")
+      }
+    }
+    else if(this.isHover){
+      this.isHover = false;
+      this.mouse("unhover")
+    }
+  }
+}
+Sup.registerBehavior(NextSignBehavior);
+
+
+function SetSign(whichOne : string){
+
+    function RotateMoveObject(nameActor: string, movementTime : number, degrees : number, moveX : boolean, endingX: number){
+
+        var xStep = 0;
+        var totalRotated = 0;
+
+        var radiansFinal = Sup.Math.toRadians(degrees);
+        var radians = radiansFinal-Sup.getActor(nameActor).getEulerZ();
+        var radianStep = (1000/60)*radians/movementTime;
+
+        if(moveX){
+            xStep = (endingX-Sup.getActor(nameActor).getX())/(60*movementTime/1000);
+        }
+
+        var movementInterval = Sup.setInterval(timeStep, function(){
+
+            if(totalRotated < radians){
+                Sup.getActor(nameActor).rotateEulerZ(radianStep);
+                if(moveX){Sup.getActor(nameActor).moveX(xStep);}
+                totalRotated = totalRotated + radianStep;
+            }
+            else{
+                Sup.getActor(nameActor).setEulerZ(radiansFinal);
+                Sup.getActor(nameActor).setX(endingX);
+                Sup.clearInterval(movementInterval);
+            }
+        })
+    }
+    
+    if(whichOne == "ResetAll"){
+        
+        Sup.getActor("WrongSign").setEulerZ(Sup.Math.toRadians(WrongInitialZDegree));
+        Sup.getActor("WrongSign").setX(WrongInitialXPos);
+        Sup.getActor("RightSign").setEulerZ(Sup.Math.toRadians(RightInitialZDegree));
+        Sup.getActor("RightSign").setX(RightInitialXPos);
+        Sup.getActor("QuestionSign").setEulerZ(Sup.Math.toRadians(QuestionInitialZDegree));
+        Sup.getActor("QuestionSign").setX(QuestionInitialXPos);
+        Sup.getActor("NextSign").setEulerZ(Sup.Math.toRadians(NextInitialZDegree));
+        Sup.getActor("NextSign").setX(NextInitialXPos);
+    }
+    else{
+        
+        RotateMoveObject(whichOne+"Sign", eval(whichOne+"Time"), 0, true, eval(whichOne+"FinalXPos"));
+    }
+    
+}
+
+
+
+
+
+
 namespace Questions {
   
   export var selectedOption = -1;
@@ -12,11 +112,11 @@ namespace Questions {
       let name = "Alternative" + index.toString();
 
       // get the actor from the Game scene
-      let optionCircle = Sup.getActor("QuestionDialog").getChild(name).getChild("Circle");
-      let optionText = Sup.getActor("QuestionDialog").getChild(name);
+      let optionText = Sup.getActor("Question").getChild(name);
+      let optionMark = Sup.getActor("MarkChalk"+index);
 
       // push the option array in OPTIONS array to the next index
-      OPTIONS.push([optionCircle, optionText, "unHover"]);
+      OPTIONS.push([optionText, "unHover", optionMark]);
     }
 
     for(let i = 0; i <= 2; i++){
@@ -32,44 +132,36 @@ namespace Questions {
   
   //Loads components in the array
   export function loadNewQuestion(player: number, number: number){
-    Sup.getActor("QuestionDialog").getChild("Question").textRenderer.setText(qtexts["q"+player+"_"+number+"question"]);
+    Sup.getActor("Question").textRenderer.setText(qtexts["q"+player+"_"+number+"question"]);
     for(var i=0;i<=2;i++){
-      OPTIONS[i][1].textRenderer.setText(qtexts["q"+player+"_"+number+"option"+i]);
+      OPTIONS[i][0].textRenderer.setText(qtexts["q"+player+"_"+number+"option"+i]);
     }
     Questions.rightOption=qtexts["q"+player+"_"+number+"right"];
   }
   
   //Show new question
   export function showNewQuestion(){
-    loadNewQuestion(actualPlayer,NEXTQUESTION[actualPlayer]);
-    Sup.getActor("QuestionDialog").getChild("Question").getBehavior(TextBehavior).getReady();
+    loadNewQuestion(actualPlayer,questionNumber);
+    Sup.getActor("Question").getBehavior(TextBehavior).getReady();
     for (var i=0; i<=2; i++){
-      OPTIONS[i][1].getBehavior(TextBehavior).getReady();
+      OPTIONS[i][0].addBehavior(TextBehavior);
+      OPTIONS[i][0].getBehavior(TextBehavior).getReady();
     }
-    Sup.getActor("QuestionDialog").setVisible(true);
   }
 
   export function clearQuestion(){
-    Sup.getActor("QuestionDialog").setVisible(false);
-    Sup.getActor("QuestionDialog").addBehavior(QuestionBehavior);    
-    Sup.getActor("QuestionDialog").getChild("HeaderQuestion").spriteRenderer.setAnimation("question");
-    Sup.getActor("QuestionDialog").getChild("Title").textRenderer.setText("QUAL É A MELHOR ALTERNATIVA?");
-    Sup.getActor("QuestionDialog").getChild("Question").setVisible(false);
+    Sup.getActor("RightChalk").setVisible(false);
     for (var i=0; i<=2; i++){
-      OPTIONS[i][0].spriteRenderer.setAnimation("unhover");
-      OPTIONS[i][1].textRenderer.setColor(ColorTextBlack); 
-      OPTIONS[i][1].setVisible(false);
-      OPTIONS[i][2] = "unHover";
+      OPTIONS[i][1] = "unHover";
+      OPTIONS[i][2].setVisible(false);
     }
-    Sup.getActor("QuestionDialog").getChild("Next").setVisible(false);
-    Sup.getActor("QuestionDialog").getChild("Next").textRenderer.setColor(ColorTextGreen);
-    Sup.getActor("QuestionDialog").getChild("Next").getBehavior(questionDialogButtonBehavior).setClickToSolve();
+    SetSign("ResetAll");
   }
   
   
   export function solveQuestion(){
     Sup.getActor("QuestionDialog").getBehavior(QuestionBehavior).destroy();
-    Sup.getActor("QuestionDialog").getChild("Next").getBehavior(questionDialogButtonBehavior).setClickToBoard();
+    //Sup.getActor("QuestionDialog").getChild("Next").getBehavior(questionDialogButtonBehavior).setClickToBoard();
     //right answer
     if(selectedOption === rightOption){
       Sup.getActor("QuestionDialog").getChild("HeaderQuestion").spriteRenderer.setAnimation("right");
@@ -80,7 +172,7 @@ namespace Questions {
       Sup.getActor("QuestionDialog").getChild("HeaderQuestion").spriteRenderer.setAnimation("wrong");
       Sup.getActor("QuestionDialog").getChild("Title").textRenderer.setText("RESPOSTA ERRADA. Melhor não avançar se a segurança\nestá em risco. Tente mais uma vez =)");
     }
-    NEXTQUESTION[actualPlayer]=NEXTQUESTION[actualPlayer]+1;
+    questionNumber=questionNumber++;
     //Reveals right and wrong answers
     for (var i=0; i<=2; i++){
       if(i === rightOption){
@@ -95,7 +187,6 @@ namespace Questions {
 }
 
 
-
 class QuestionBehavior extends Sup.Behavior {
   
   awake() {
@@ -105,24 +196,25 @@ class QuestionBehavior extends Sup.Behavior {
   // mouse method receiving parameters of the player action and the square related to this action
   mouse(action, option){
     if(action == "isHover"){
-      OPTIONS[option][0].spriteRenderer.setAnimation("ishover");
-      OPTIONS[option][1].textRenderer.setColor(ColorTextGray);
+      
+      OPTIONS[option][2].spriteRenderer.setOpacity(opacityMark);
+      OPTIONS[option][2].setVisible(true);
+        
     }
     else if(action == "unHover"){
-      OPTIONS[option][0].spriteRenderer.setAnimation("unhover");
-      OPTIONS[option][1].textRenderer.setColor(ColorTextBlack);
+      OPTIONS[option][2].setVisible(false);
     }
     else if(action == "click"){
       for(var i=0; i<=2; i++){
         if(Questions.selectedOption != -1 && Questions.selectedOption != option){
-          OPTIONS[Questions.selectedOption][0].spriteRenderer.setAnimation("unhover");
-          OPTIONS[Questions.selectedOption][1].textRenderer.setColor(ColorTextBlack); 
-          OPTIONS[Questions.selectedOption][2] = "unHover";
+          OPTIONS[Questions.selectedOption][2].setVisible(false);
+          OPTIONS[Questions.selectedOption][1] = "unHover";
         }
-        OPTIONS[option][0].spriteRenderer.setAnimation("checked");
-        OPTIONS[option][1].textRenderer.setColor(ColorTextBlack);
+        OPTIONS[option][2].spriteRenderer.setOpacity(1)
+        OPTIONS[option][2].setVisible(true);  
+
         Questions.selectedOption = option;
-        this.actor.getChild("Next").setVisible(true);
+        //#############SOME CODE TO TRIGGER SOLVE QUESTION
       }
     }
   }
@@ -140,23 +232,23 @@ class QuestionBehavior extends Sup.Behavior {
     for(array of OPTIONS){
 
       // Check if ray intersect with a current option
-      if(ray.intersectActor(array[0], false).length > 0 || ray.intersectActor(array[1], false).length > 0){
+      if(ray.intersectActor(array[0], false).length > 0){
 
-        if(array[2] == "unHover"){
-          array[2] = "isHover";
+        if(array[1] == "unHover"){
+          array[1] = "isHover";
           this.mouse("isHover", index);
         }
 
         // Check if the left click button of the mouse is pressed on an unselected option
-        if(Sup.Input.wasMouseButtonJustPressed(0) && array[2] == "isHover"){
-          array[2] = "selected";
+        if(Sup.Input.wasMouseButtonJustPressed(0) && array[1] == "isHover"){
+          array[1] = "selected";
           this.mouse("click", index);
         }
       }
 
       // Else if ray does not intersect with a previous hovered option, the option change situation
-      else if(array[2] == "isHover"){
-        array[2] = "unHover";
+      else if(array[1] == "isHover"){
+        array[1] = "unHover";
         this.mouse("unHover", index);
       }
       index++;
@@ -165,60 +257,6 @@ class QuestionBehavior extends Sup.Behavior {
 }
 Sup.registerBehavior(QuestionBehavior);
 
-
-class questionDialogButtonBehavior extends Sup.Behavior {
-  // flag to tell when the mouse hover the button
-  isHover : boolean = false;
-  private backToBoard = false;
-
-  awake() {
-    ray = new Sup.Math.Ray(this.actor.getPosition(), new Sup.Math.Vector3(0, 0, -1));
-  }
-
-  setClickToBoard(){
-    this.backToBoard = true;
-  }
-
-  setClickToSolve(){
-    this.backToBoard = false;
-  }
-
-  mouse(action) {
-    if(action == "click"){
-      if(this.backToBoard){
-      }else{
-        Questions.solveQuestion();
-      }
-    }
-    else if(action == "hover"){
-      this.actor.textRenderer.setColor(ColorTextLightGreen); 
-    }
-    else if(action == "unhover"){
-      this.actor.textRenderer.setColor(ColorTextGreen);
-    }
-  }
-
-  update() {
-    if(this.actor.getVisible()){
-      ray.setFromCamera(Sup.getActor("Camera").camera, Sup.Input.getMousePosition());
-
-      if(ray.intersectActor(this.actor, false).length > 0){
-        if(!this.isHover){
-          this.mouse("hover");
-          this.isHover = true;
-        }
-        if(Sup.Input.wasMouseButtonJustPressed(0)){
-          this.mouse("click")
-        }
-      }
-      else if(this.isHover){
-        this.isHover = false;
-        this.mouse("unhover")
-      }
-    }
-  }
-}
-Sup.registerBehavior(questionDialogButtonBehavior);
 
 
 class gameoverDialogAgainBehavior extends Sup.Behavior {
@@ -350,7 +388,7 @@ Sup.registerBehavior(arriveDialogContinueBehavior);
 
 class TextBehavior extends Sup.Behavior {
   
-  charsPerLine = 65;
+  charsPerLine = 56;
 
   private text = "";
   private letterIndex = 0;
@@ -366,7 +404,6 @@ class TextBehavior extends Sup.Behavior {
   }
 
   start(){
-    
     
   }
 
@@ -404,9 +441,7 @@ class TextBehavior extends Sup.Behavior {
     if (currentLineLength > 0) lines.push(text.slice(lineStartIndex));
     
     this.text = lines.join("\n");
-
-    this.letterIndex = initialLetterIndex;
-    this.actor.textRenderer.setText(this.text.slice(0, this.letterIndex));
+    this.actor.textRenderer.setText(this.text);
     
   }
 

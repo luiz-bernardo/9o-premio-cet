@@ -11,7 +11,7 @@
           "config": {
             "mode": "orthographic",
             "fov": 45,
-            "orthographicScale": 7.7,
+            "orthographicScale": 7.69,
             "viewport": {
               "x": 0,
               "y": 0,
@@ -276,72 +276,33 @@
               "name": "Alternative0",
               "children": [
                 {
-                  "id": "59",
-                  "name": "Alternative1",
-                  "children": [
-                    {
-                      "id": "60",
-                      "name": "Alternative2",
-                      "children": [],
-                      "components": [
-                        {
-                          "type": "TextRenderer",
-                          "config": {
-                            "formatVersion": 2,
-                            "fontAssetId": "37",
-                            "text": "C) Atravessar em linha reta e somente quando puder\ngarantir que já tempo de sobra para a travessia, com\npassos rápidos e firmes, mas sem a necessidade de correr.",
-                            "alignment": "left",
-                            "verticalAlignment": "top",
-                            "size": 52,
-                            "color": null,
-                            "overrideOpacity": false,
-                            "opacity": null
-                          },
-                          "id": "0"
-                        }
-                      ],
-                      "position": {
-                        "x": 0,
-                        "y": -0.8999998569488525,
-                        "z": 0
-                      },
-                      "orientation": {
-                        "x": 0,
-                        "y": 0,
-                        "z": 0,
-                        "w": 1
-                      },
-                      "scale": {
-                        "x": 1,
-                        "y": 1,
-                        "z": 1
-                      },
-                      "visible": true,
-                      "layer": 0,
-                      "prefab": null
-                    }
-                  ],
+                  "id": "62",
+                  "name": "MarkChalk0",
+                  "children": [],
                   "components": [
                     {
-                      "type": "TextRenderer",
+                      "type": "SpriteRenderer",
                       "config": {
-                        "formatVersion": 2,
-                        "fontAssetId": "37",
-                        "text": "B) Atravessar em linha reta e somente quando puder\ngarantir que já tempo de sobra para a travessia, com\npassos rápidos e firmes, mas sem a necessidade de correr.",
-                        "alignment": "left",
-                        "verticalAlignment": "top",
-                        "size": 52,
-                        "color": null,
-                        "overrideOpacity": false,
-                        "opacity": null
+                        "formatVersion": 1,
+                        "spriteAssetId": "107",
+                        "animationId": null,
+                        "horizontalFlip": false,
+                        "verticalFlip": false,
+                        "castShadow": false,
+                        "receiveShadow": false,
+                        "color": "ffffff",
+                        "overrideOpacity": true,
+                        "opacity": 1,
+                        "materialType": "basic",
+                        "shaderAssetId": null
                       },
                       "id": "0"
                     }
                   ],
                   "position": {
-                    "x": 0,
-                    "y": -0.9,
-                    "z": 0
+                    "x": 0.1,
+                    "y": -0.23,
+                    "z": 1
                   },
                   "orientation": {
                     "x": 0,
@@ -374,11 +335,275 @@
                     "opacity": null
                   },
                   "id": "0"
+                },
+                {
+                  "type": "Behavior",
+                  "config": {
+                    "behaviorName": "TextBehavior",
+                    "propertyValues": {}
+                  },
+                  "id": "1"
+                },
+                {
+                  "type": "Behavior",
+                  "config": {
+                    "behaviorName": "QuestionBehavior",
+                    "propertyValues": {}
+                  },
+                  "id": "2"
                 }
               ],
               "position": {
                 "x": 0,
                 "y": -1.2000000476837158,
+                "z": 0
+              },
+              "orientation": {
+                "x": 0,
+                "y": 0,
+                "z": 0,
+                "w": 1
+              },
+              "scale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+              },
+              "visible": true,
+              "layer": 0,
+              "prefab": null
+            },
+            {
+              "id": "59",
+              "name": "Alternative1",
+              "children": [
+                {
+                  "id": "63",
+                  "name": "RightChalk",
+                  "children": [],
+                  "components": [
+                    {
+                      "type": "SpriteRenderer",
+                      "config": {
+                        "formatVersion": 1,
+                        "spriteAssetId": "106",
+                        "animationId": null,
+                        "horizontalFlip": false,
+                        "verticalFlip": false,
+                        "castShadow": false,
+                        "receiveShadow": false,
+                        "color": "ffffff",
+                        "overrideOpacity": false,
+                        "opacity": null,
+                        "materialType": "basic",
+                        "shaderAssetId": null
+                      },
+                      "id": "0"
+                    }
+                  ],
+                  "position": {
+                    "x": 0.1,
+                    "y": -0.2,
+                    "z": 2
+                  },
+                  "orientation": {
+                    "x": 0,
+                    "y": 0,
+                    "z": 0,
+                    "w": 1
+                  },
+                  "scale": {
+                    "x": 1,
+                    "y": 1,
+                    "z": 1
+                  },
+                  "visible": true,
+                  "layer": 0,
+                  "prefab": null
+                },
+                {
+                  "id": "64",
+                  "name": "MarkChalk1",
+                  "children": [],
+                  "components": [
+                    {
+                      "type": "SpriteRenderer",
+                      "config": {
+                        "formatVersion": 1,
+                        "spriteAssetId": "107",
+                        "animationId": null,
+                        "horizontalFlip": false,
+                        "verticalFlip": false,
+                        "castShadow": false,
+                        "receiveShadow": false,
+                        "color": "ffffff",
+                        "overrideOpacity": true,
+                        "opacity": 1,
+                        "materialType": "basic",
+                        "shaderAssetId": null
+                      },
+                      "id": "0"
+                    }
+                  ],
+                  "position": {
+                    "x": 0.1,
+                    "y": -0.23,
+                    "z": 1
+                  },
+                  "orientation": {
+                    "x": 0,
+                    "y": 0,
+                    "z": 0,
+                    "w": 1
+                  },
+                  "scale": {
+                    "x": 1,
+                    "y": 1,
+                    "z": 1
+                  },
+                  "visible": true,
+                  "layer": 0,
+                  "prefab": null
+                }
+              ],
+              "components": [
+                {
+                  "type": "TextRenderer",
+                  "config": {
+                    "formatVersion": 2,
+                    "fontAssetId": "37",
+                    "text": "B) Atravessar em linha reta e somente quando puder\ngarantir que já tempo de sobra para a travessia, com\npassos rápidos e firmes, mas sem a necessidade de correr.",
+                    "alignment": "left",
+                    "verticalAlignment": "top",
+                    "size": 52,
+                    "color": null,
+                    "overrideOpacity": false,
+                    "opacity": null
+                  },
+                  "id": "0"
+                },
+                {
+                  "type": "Behavior",
+                  "config": {
+                    "behaviorName": "TextBehavior",
+                    "propertyValues": {}
+                  },
+                  "id": "1"
+                },
+                {
+                  "type": "Behavior",
+                  "config": {
+                    "behaviorName": "QuestionBehavior",
+                    "propertyValues": {}
+                  },
+                  "id": "2"
+                }
+              ],
+              "position": {
+                "x": 0,
+                "y": -2.0999999046325684,
+                "z": 0
+              },
+              "orientation": {
+                "x": 0,
+                "y": 0,
+                "z": 0,
+                "w": 1
+              },
+              "scale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+              },
+              "visible": true,
+              "layer": 0,
+              "prefab": null
+            },
+            {
+              "id": "60",
+              "name": "Alternative2",
+              "children": [
+                {
+                  "id": "65",
+                  "name": "MarkChalk2",
+                  "children": [],
+                  "components": [
+                    {
+                      "type": "SpriteRenderer",
+                      "config": {
+                        "formatVersion": 1,
+                        "spriteAssetId": "107",
+                        "animationId": null,
+                        "horizontalFlip": false,
+                        "verticalFlip": false,
+                        "castShadow": false,
+                        "receiveShadow": false,
+                        "color": "ffffff",
+                        "overrideOpacity": true,
+                        "opacity": 1,
+                        "materialType": "basic",
+                        "shaderAssetId": null
+                      },
+                      "id": "0"
+                    }
+                  ],
+                  "position": {
+                    "x": 0.1,
+                    "y": -0.23,
+                    "z": 1
+                  },
+                  "orientation": {
+                    "x": 0,
+                    "y": 0,
+                    "z": 0,
+                    "w": 1
+                  },
+                  "scale": {
+                    "x": 1,
+                    "y": 1,
+                    "z": 1
+                  },
+                  "visible": true,
+                  "layer": 0,
+                  "prefab": null
+                }
+              ],
+              "components": [
+                {
+                  "type": "TextRenderer",
+                  "config": {
+                    "formatVersion": 2,
+                    "fontAssetId": "37",
+                    "text": "C) Atravessar em linha reta e somente quando puder\ngarantir que já tempo de sobra para a travessia, com\npassos rápidos e firmes, mas sem a necessidade de correr.",
+                    "alignment": "left",
+                    "verticalAlignment": "top",
+                    "size": 52,
+                    "color": null,
+                    "overrideOpacity": false,
+                    "opacity": null
+                  },
+                  "id": "0"
+                },
+                {
+                  "type": "Behavior",
+                  "config": {
+                    "behaviorName": "TextBehavior",
+                    "propertyValues": {}
+                  },
+                  "id": "1"
+                },
+                {
+                  "type": "Behavior",
+                  "config": {
+                    "behaviorName": "QuestionBehavior",
+                    "propertyValues": {}
+                  },
+                  "id": "2"
+                }
+              ],
+              "position": {
+                "x": 0,
+                "y": -3,
                 "z": 0
               },
               "orientation": {
@@ -412,6 +637,14 @@
                 "opacity": null
               },
               "id": "0"
+            },
+            {
+              "type": "Behavior",
+              "config": {
+                "behaviorName": "TextBehavior",
+                "propertyValues": {}
+              },
+              "id": "1"
             }
           ],
           "position": {
@@ -453,14 +686,6 @@
             "shaderAssetId": null
           },
           "id": "0"
-        },
-        {
-          "type": "Behavior",
-          "config": {
-            "behaviorName": "SignBehavior",
-            "propertyValues": {}
-          },
-          "id": "2"
         }
       ],
       "position": {
@@ -473,50 +698,6 @@
         "y": 0,
         "z": 0,
         "w": 1
-      },
-      "scale": {
-        "x": 1,
-        "y": 1,
-        "z": 1
-      },
-      "visible": true,
-      "layer": 0,
-      "prefab": null
-    },
-    {
-      "id": "52",
-      "name": "RightSign",
-      "children": [],
-      "components": [
-        {
-          "type": "SpriteRenderer",
-          "config": {
-            "formatVersion": 1,
-            "spriteAssetId": "99",
-            "animationId": null,
-            "horizontalFlip": false,
-            "verticalFlip": false,
-            "castShadow": false,
-            "receiveShadow": false,
-            "color": "ffffff",
-            "overrideOpacity": false,
-            "opacity": null,
-            "materialType": "basic",
-            "shaderAssetId": null
-          },
-          "id": "0"
-        }
-      ],
-      "position": {
-        "x": -2,
-        "y": -8.75,
-        "z": 4
-      },
-      "orientation": {
-        "x": 0,
-        "y": 0,
-        "z": -0.573576436351046,
-        "w": 0.8191520442889918
       },
       "scale": {
         "x": 1,
@@ -554,7 +735,7 @@
       "position": {
         "x": 3.4,
         "y": -6.45,
-        "z": 4
+        "z": 6
       },
       "orientation": {
         "x": 0,
@@ -565,6 +746,102 @@
       "scale": {
         "x": 1,
         "y": 1,
+        "z": 1
+      },
+      "visible": true,
+      "layer": 0,
+      "prefab": null
+    },
+    {
+      "id": "52",
+      "name": "RightSign",
+      "children": [],
+      "components": [
+        {
+          "type": "SpriteRenderer",
+          "config": {
+            "formatVersion": 1,
+            "spriteAssetId": "99",
+            "animationId": null,
+            "horizontalFlip": false,
+            "verticalFlip": false,
+            "castShadow": false,
+            "receiveShadow": false,
+            "color": "ffffff",
+            "overrideOpacity": false,
+            "opacity": null,
+            "materialType": "basic",
+            "shaderAssetId": null
+          },
+          "id": "0"
+        }
+      ],
+      "position": {
+        "x": -2,
+        "y": -8.749999046325684,
+        "z": 6
+      },
+      "orientation": {
+        "x": 0,
+        "y": 0,
+        "z": -0.57357643143127,
+        "w": 0.8191520475465248
+      },
+      "scale": {
+        "x": 0.9999999995881268,
+        "y": 0.9999999995881268,
+        "z": 1
+      },
+      "visible": true,
+      "layer": 0,
+      "prefab": null
+    },
+    {
+      "id": "61",
+      "name": "NextSign",
+      "children": [],
+      "components": [
+        {
+          "type": "SpriteRenderer",
+          "config": {
+            "formatVersion": 1,
+            "spriteAssetId": "105",
+            "animationId": null,
+            "horizontalFlip": false,
+            "verticalFlip": false,
+            "castShadow": false,
+            "receiveShadow": false,
+            "color": "ffffff",
+            "overrideOpacity": false,
+            "opacity": null,
+            "materialType": "basic",
+            "shaderAssetId": null
+          },
+          "id": "0"
+        },
+        {
+          "type": "Behavior",
+          "config": {
+            "behaviorName": "NextSignBehavior",
+            "propertyValues": {}
+          },
+          "id": "1"
+        }
+      ],
+      "position": {
+        "x": 5.5,
+        "y": -7.87,
+        "z": 7
+      },
+      "orientation": {
+        "x": 0,
+        "y": 0,
+        "z": -0.25881904510252074,
+        "w": 0.9659258262890683
+      },
+      "scale": {
+        "x": 1.000000018580481,
+        "y": 1.000000018580481,
         "z": 1
       },
       "visible": true,
@@ -597,21 +874,21 @@
       ],
       "position": {
         "x": 0,
-        "y": 4.5,
+        "y": 0,
         "z": 10
       },
       "orientation": {
         "x": 0,
-        "y": 0,
+        "y": 0.16504760586067765,
         "z": 0,
-        "w": 1
+        "w": 0.9862856015372314
       },
       "scale": {
         "x": 1,
         "y": 1,
         "z": 1
       },
-      "visible": true,
+      "visible": false,
       "layer": 0,
       "prefab": null
     }

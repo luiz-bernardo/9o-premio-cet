@@ -76,49 +76,15 @@
         }
       ]
     },
-    "SignBehavior": {
-      "scriptId": "55",
-      "line": 18,
-      "parentBehavior": null,
-      "properties": [
-        {
-          "name": "time",
-          "type": "number"
-        },
-        {
-          "name": "degrees",
-          "type": "number"
-        },
-        {
-          "name": "moveX",
-          "type": "boolean"
-        },
-        {
-          "name": "endingX",
-          "type": "number"
-        }
-      ]
-    },
     "QuestionBehavior": {
       "scriptId": "54",
-      "line": 98,
+      "line": 189,
       "parentBehavior": null,
       "properties": []
     },
-    "questionDialogButtonBehavior": {
-      "scriptId": "54",
-      "line": 168,
-      "parentBehavior": null,
-      "properties": [
-        {
-          "name": "isHover",
-          "type": "boolean"
-        }
-      ]
-    },
     "gameoverDialogAgainBehavior": {
       "scriptId": "54",
-      "line": 223,
+      "line": 261,
       "parentBehavior": null,
       "properties": [
         {
@@ -129,7 +95,7 @@
     },
     "gameoverDialogExitBehavior": {
       "scriptId": "54",
-      "line": 265,
+      "line": 303,
       "parentBehavior": null,
       "properties": [
         {
@@ -140,7 +106,7 @@
     },
     "arriveDialogContinueBehavior": {
       "scriptId": "54",
-      "line": 307,
+      "line": 345,
       "parentBehavior": null,
       "properties": [
         {
@@ -151,12 +117,23 @@
     },
     "TextBehavior": {
       "scriptId": "54",
-      "line": 350,
+      "line": 388,
       "parentBehavior": null,
       "properties": [
         {
           "name": "charsPerLine",
           "type": "number"
+        }
+      ]
+    },
+    "NextSignBehavior": {
+      "scriptId": "54",
+      "line": 1,
+      "parentBehavior": null,
+      "properties": [
+        {
+          "name": "isHover",
+          "type": "boolean"
         }
       ]
     }

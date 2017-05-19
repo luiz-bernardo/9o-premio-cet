@@ -1,5 +1,5 @@
 {
-  "nextEntryId": 105,
+  "nextEntryId": 109,
   "nodes": [
     {
       "id": "10",
@@ -206,6 +206,21 @@
           "id": "103",
           "name": "PreviousTrackButton",
           "type": "sprite"
+        },
+        {
+          "id": "105",
+          "name": "NextSign",
+          "type": "sprite"
+        },
+        {
+          "id": "106",
+          "name": "RightChalk",
+          "type": "sprite"
+        },
+        {
+          "id": "107",
+          "name": "MarkChalk",
+          "type": "sprite"
         }
       ]
     },
@@ -292,13 +307,13 @@
           "type": "sprite"
         },
         {
-          "id": "57",
-          "name": "GameOver",
+          "id": "59",
+          "name": "GameWin",
           "type": "sprite"
         },
         {
-          "id": "59",
-          "name": "GameWin",
+          "id": "57",
+          "name": "GameOver",
           "type": "sprite"
         }
       ]
