@@ -22,6 +22,7 @@ var NextInitialXPos = 5.5
 var NextInitialZDegree = -30
 var NextFinalXPos = 3.65
 
+
 var ColorTextBlack = new Sup.Color(0.278,0.259,0.259);
 var ColorTextGray = new Sup.Color(0.494,0.461,0.461);
 var ColorTextGreen = new Sup.Color(0.333,0.729,0.043);
@@ -29,10 +30,12 @@ var ColorTextLightGreen = new Sup.Color(0.706,0.878,0.576);
 var ColorTextRed = new Sup.Color(0.996,0.016,0.043);
 var ColorTextDarkRed = new Sup.Color(0.749,0.110,0.129);
 
+
 const OPTIONS = new Array;
 var questionNumber = 0;
 var actualPlayer = 0;
 var opacityMark = 0.651;
+var waitTime = 400;
 
 
 namespace Game{
