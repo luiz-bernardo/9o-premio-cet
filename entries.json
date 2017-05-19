@@ -75,12 +75,12 @@
         },
         {
           "id": "54",
-          "name": "Question",
+          "name": "Questions",
           "type": "script"
         },
         {
           "id": "46",
-          "name": "QuestionsContent",
+          "name": "Content",
           "type": "script"
         },
         {

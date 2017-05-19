@@ -1,4 +1,4 @@
-Dialog.qtexts = {
+Questions.qtexts = {
 
   // Motorista (Joana)
 

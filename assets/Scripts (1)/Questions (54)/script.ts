@@ -1,5 +1,5 @@
 
-namespace Dialog {
+namespace Questions {
   
   export var selectedOption = -1;
   export var rightOption = -2;
@@ -36,13 +36,12 @@ namespace Dialog {
     for(var i=0;i<=2;i++){
       OPTIONS[i][1].textRenderer.setText(qtexts["q"+player+"_"+number+"option"+i]);
     }
-    Dialog.rightOption=qtexts["q"+player+"_"+number+"right"];
+    Questions.rightOption=qtexts["q"+player+"_"+number+"right"];
   }
   
   //Show new question
   export function showNewQuestion(){
     loadNewQuestion(actualPlayer,NEXTQUESTION[actualPlayer]);
-    indexToShow=1;
     Sup.getActor("QuestionDialog").getChild("Question").getBehavior(TextBehavior).getReady();
     for (var i=0; i<=2; i++){
       OPTIONS[i][1].getBehavior(TextBehavior).getReady();
@@ -75,16 +74,11 @@ namespace Dialog {
     if(selectedOption === rightOption){
       Sup.getActor("QuestionDialog").getChild("HeaderQuestion").spriteRenderer.setAnimation("right");
       Sup.getActor("QuestionDialog").getChild("Title").textRenderer.setText("Muito bom! Sua RESPOSTA está CORRETA! =)\nMais um passo em segurança. ");
-      //Sets the variables for the pin to move later
-      PLAYERPOSITION[actualPlayer]=PLAYERPOSITION[actualPlayer]+1;
-      itMoves=true;
     }
     //wrong answer
     else{
       Sup.getActor("QuestionDialog").getChild("HeaderQuestion").spriteRenderer.setAnimation("wrong");
       Sup.getActor("QuestionDialog").getChild("Title").textRenderer.setText("RESPOSTA ERRADA. Melhor não avançar se a segurança\nestá em risco. Tente mais uma vez =)");
-      WRONGANSWERS[actualPlayer]=WRONGANSWERS[actualPlayer]+1;
-      itMoves=false;
     }
     NEXTQUESTION[actualPlayer]=NEXTQUESTION[actualPlayer]+1;
     //Reveals right and wrong answers
@@ -120,14 +114,14 @@ class QuestionBehavior extends Sup.Behavior {
     }
     else if(action == "click"){
       for(var i=0; i<=2; i++){
-        if(Dialog.selectedOption != -1 && Dialog.selectedOption != option){
-          OPTIONS[Dialog.selectedOption][0].spriteRenderer.setAnimation("unhover");
-          OPTIONS[Dialog.selectedOption][1].textRenderer.setColor(ColorTextBlack); 
-          OPTIONS[Dialog.selectedOption][2] = "unHover";
+        if(Questions.selectedOption != -1 && Questions.selectedOption != option){
+          OPTIONS[Questions.selectedOption][0].spriteRenderer.setAnimation("unhover");
+          OPTIONS[Questions.selectedOption][1].textRenderer.setColor(ColorTextBlack); 
+          OPTIONS[Questions.selectedOption][2] = "unHover";
         }
         OPTIONS[option][0].spriteRenderer.setAnimation("checked");
         OPTIONS[option][1].textRenderer.setColor(ColorTextBlack);
-        Dialog.selectedOption = option;
+        Questions.selectedOption = option;
         this.actor.getChild("Next").setVisible(true);
       }
     }
@@ -192,9 +186,8 @@ class questionDialogButtonBehavior extends Sup.Behavior {
   mouse(action) {
     if(action == "click"){
       if(this.backToBoard){
-        Turn.nextTurn();
       }else{
-        Dialog.solveQuestion();
+        Questions.solveQuestion();
       }
     }
     else if(action == "hover"){
@@ -238,7 +231,7 @@ class gameoverDialogAgainBehavior extends Sup.Behavior {
 
   mouse(action) {
     if(action == "click"){
-      Game.startAgain();
+      Game.startGame();
     }
     else if(action == "hover"){
       this.actor.textRenderer.setColor(ColorTextLightGreen); 
@@ -323,7 +316,6 @@ class arriveDialogContinueBehavior extends Sup.Behavior {
   mouse(action) {
     if(action == "click"){
       Sup.getActor("SuccessDialog").setVisible(false);
-      Turn.phaseTwo();
     }
     else if(action == "hover"){
       this.actor.textRenderer.setColor(ColorTextLightGreen); 

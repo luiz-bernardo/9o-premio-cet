@@ -27,6 +27,7 @@ var ColorTextDarkRed = new Sup.Color(0.749,0.110,0.129);
 const OPTIONS = new Array;
 var NEXTQUESTION = [0,0,0];
 var questionNumber = 0;
+var actualPlayer = 0;
 
 
 class SignBehavior extends Sup.Behavior {
@@ -109,10 +110,9 @@ namespace Game{
 
     NEXTQUESTION = [0,0,0];
     
-    Dialog.clearOptionsArray();
-    Dialog.selectedOption=-1;
-    Dialog.rightOption=-2;
-    
+    Questions.clearOptionsArray();
+    Questions.selectedOption=-1;
+    Questions.rightOption=-2;
   }
   
   export function backToMenu(){
@@ -121,10 +121,8 @@ namespace Game{
   }
   
   export function startGame(){
-    Dialog.setOptionsArray();
-    Sup.setTimeout(4000,function(){
-      Dialog.clearQuestion();
-      Dialog.showNewQuestion();
-    })    
+    Questions.setOptionsArray();
+    Questions.clearQuestion();
+    Questions.showNewQuestion();
   }
 }

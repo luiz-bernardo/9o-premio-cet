@@ -98,6 +98,67 @@
           "type": "number"
         }
       ]
+    },
+    "QuestionBehavior": {
+      "scriptId": "54",
+      "line": 98,
+      "parentBehavior": null,
+      "properties": []
+    },
+    "questionDialogButtonBehavior": {
+      "scriptId": "54",
+      "line": 168,
+      "parentBehavior": null,
+      "properties": [
+        {
+          "name": "isHover",
+          "type": "boolean"
+        }
+      ]
+    },
+    "gameoverDialogAgainBehavior": {
+      "scriptId": "54",
+      "line": 223,
+      "parentBehavior": null,
+      "properties": [
+        {
+          "name": "isHover",
+          "type": "boolean"
+        }
+      ]
+    },
+    "gameoverDialogExitBehavior": {
+      "scriptId": "54",
+      "line": 265,
+      "parentBehavior": null,
+      "properties": [
+        {
+          "name": "isHover",
+          "type": "boolean"
+        }
+      ]
+    },
+    "arriveDialogContinueBehavior": {
+      "scriptId": "54",
+      "line": 307,
+      "parentBehavior": null,
+      "properties": [
+        {
+          "name": "isHover",
+          "type": "boolean"
+        }
+      ]
+    },
+    "TextBehavior": {
+      "scriptId": "54",
+      "line": 350,
+      "parentBehavior": null,
+      "properties": [
+        {
+          "name": "charsPerLine",
+          "type": "number"
+        }
+      ]
     }
   }
 }
