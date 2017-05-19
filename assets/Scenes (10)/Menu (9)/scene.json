@@ -100,10 +100,6 @@
           "config": {
             "behaviorName": "StandardButtonBehavior",
             "propertyValues": {
-              "scenetoLoad": {
-                "type": "string",
-                "value": "Intro"
-              },
               "sceneToLoad": {
                 "type": "string",
                 "value": "Intro"
@@ -186,12 +182,7 @@
                   "type": "Behavior",
                   "config": {
                     "behaviorName": "StandardButtonBehavior",
-                    "propertyValues": {
-                      "scenetoLoad": {
-                        "type": "string",
-                        "value": "About"
-                      }
-                    }
+                    "propertyValues": {}
                   },
                   "id": "2"
                 }
@@ -241,10 +232,6 @@
               "config": {
                 "behaviorName": "StandardButtonBehavior",
                 "propertyValues": {
-                  "scenetoLoad": {
-                    "type": "string",
-                    "value": "About"
-                  },
                   "sceneToLoad": {
                     "type": "string",
                     "value": "About"

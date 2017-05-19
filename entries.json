@@ -74,23 +74,13 @@
           "type": "script"
         },
         {
-          "id": "52",
-          "name": "Board",
-          "type": "script"
-        },
-        {
           "id": "54",
-          "name": "Dialogs",
-          "type": "script"
-        },
-        {
-          "id": "43",
-          "name": "Text",
+          "name": "Question",
           "type": "script"
         },
         {
           "id": "46",
-          "name": "Questions",
+          "name": "QuestionsContent",
           "type": "script"
         },
         {
@@ -347,7 +337,7 @@
         },
         {
           "id": "37",
-          "name": "ArialBlack",
+          "name": "ArialBold",
           "type": "font"
         },
         {

@@ -354,3 +354,73 @@ class arriveDialogContinueBehavior extends Sup.Behavior {
   }
 }
 Sup.registerBehavior(arriveDialogContinueBehavior);
+
+
+class TextBehavior extends Sup.Behavior {
+  
+  charsPerLine = 65;
+
+  private text = "";
+  private letterIndex = 0;
+
+  awake() {
+    
+  }
+
+  clear() {
+    this.actor.textRenderer.setText("");
+    this.letterIndex = 0;
+    this.text = "";
+  }
+
+  start(){
+    
+    
+  }
+
+  getReady() {
+    this.setText(this.actor.textRenderer.getText());
+  }
+  
+  
+  //Break text if necessary
+  setText(text: string, initialLetterIndex=0) {
+    const lines: string[] = [];
+    
+    let lineStartIndex = 0;
+    let currentLineLength = 0;
+    
+    for (let i = 0; i < text.length; i++) {
+      const char = text[i];
+      if (char === "|") continue;
+      
+      currentLineLength++;
+      if (currentLineLength === this.charsPerLine) {
+        let j = i;
+        while (j > 0) {
+          const char = text[j];
+          if (char === " ") { j++; break; }
+          j--;
+        }
+        
+        lines.push(text.slice(lineStartIndex, j));
+        currentLineLength = 0;
+        lineStartIndex = i = j;
+      }
+    }
+       
+    if (currentLineLength > 0) lines.push(text.slice(lineStartIndex));
+    
+    this.text = lines.join("\n");
+
+    this.letterIndex = initialLetterIndex;
+    this.actor.textRenderer.setText(this.text.slice(0, this.letterIndex));
+    
+  }
+
+  update() {
+
+  }
+
+}
+Sup.registerBehavior(TextBehavior);

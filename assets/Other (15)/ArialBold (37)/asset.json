@@ -3,7 +3,7 @@
   "isBitmap": false,
   "filtering": "pixelated",
   "pixelsPerUnit": 200,
-  "size": 128,
+  "size": 512,
   "color": "ffffff",
   "gridWidth": 16,
   "gridHeight": 16,
