@@ -1351,7 +1351,7 @@
               "type": "TextRenderer",
               "config": {
                 "fontAssetId": "13",
-                "text": "A) Atravessar em linha reta e somente quando puder garantir que já tempo de sobra para a travessia, com passos rápidos e firmes, mas sem a necessidade de correr.",
+                "text": "C) Atravessar em linha reta e somente quando puder garantir que já tempo de sobra para a travessia, com passos rápidos e firmes, mas sem a necessidade de correr.",
                 "alignment": "left",
                 "size": 90,
                 "color": "474242",

@@ -118,10 +118,6 @@
           "config": {
             "behaviorName": "StandardButtonBehavior",
             "propertyValues": {
-              "scenetoLoad": {
-                "type": "string",
-                "value": "Board"
-              },
               "sceneToLoad": {
                 "type": "string",
                 "value": "Choice"

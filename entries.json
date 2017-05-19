@@ -1,5 +1,5 @@
 {
-  "nextEntryId": 105,
+  "nextEntryId": 109,
   "nodes": [
     {
       "id": "10",
@@ -74,23 +74,13 @@
           "type": "script"
         },
         {
-          "id": "52",
-          "name": "Board",
-          "type": "script"
-        },
-        {
           "id": "54",
-          "name": "Dialogs",
-          "type": "script"
-        },
-        {
-          "id": "43",
-          "name": "Text",
+          "name": "Questions",
           "type": "script"
         },
         {
           "id": "46",
-          "name": "Questions",
+          "name": "Content",
           "type": "script"
         },
         {
@@ -216,6 +206,21 @@
           "id": "103",
           "name": "PreviousTrackButton",
           "type": "sprite"
+        },
+        {
+          "id": "105",
+          "name": "NextSign",
+          "type": "sprite"
+        },
+        {
+          "id": "106",
+          "name": "RightChalk",
+          "type": "sprite"
+        },
+        {
+          "id": "107",
+          "name": "MarkChalk",
+          "type": "sprite"
         }
       ]
     },
@@ -302,13 +307,13 @@
           "type": "sprite"
         },
         {
-          "id": "57",
-          "name": "GameOver",
+          "id": "59",
+          "name": "GameWin",
           "type": "sprite"
         },
         {
-          "id": "59",
-          "name": "GameWin",
+          "id": "57",
+          "name": "GameOver",
           "type": "sprite"
         }
       ]
@@ -347,7 +352,7 @@
         },
         {
           "id": "37",
-          "name": "ArialBlack",
+          "name": "ArialBold",
           "type": "font"
         },
         {

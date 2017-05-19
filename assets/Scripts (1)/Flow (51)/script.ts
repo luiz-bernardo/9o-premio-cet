@@ -10,7 +10,6 @@ class SoundButtonBehavior extends Sup.Behavior {
   isPlayButton : boolean = false;
   isNextButton : boolean = false;
   isPreviousButton : boolean = false;
-  
 
   awake() {
     ray = new Sup.Math.Ray(this.actor.getPosition(), new Sup.Math.Vector3(0, 0, -1));
