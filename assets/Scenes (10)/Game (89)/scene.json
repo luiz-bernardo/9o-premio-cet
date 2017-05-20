@@ -343,14 +343,6 @@
                     "propertyValues": {}
                   },
                   "id": "1"
-                },
-                {
-                  "type": "Behavior",
-                  "config": {
-                    "behaviorName": "QuestionBehavior",
-                    "propertyValues": {}
-                  },
-                  "id": "2"
                 }
               ],
               "position": {
@@ -489,14 +481,6 @@
                     "propertyValues": {}
                   },
                   "id": "1"
-                },
-                {
-                  "type": "Behavior",
-                  "config": {
-                    "behaviorName": "QuestionBehavior",
-                    "propertyValues": {}
-                  },
-                  "id": "2"
                 }
               ],
               "position": {
@@ -591,14 +575,6 @@
                     "propertyValues": {}
                   },
                   "id": "1"
-                },
-                {
-                  "type": "Behavior",
-                  "config": {
-                    "behaviorName": "QuestionBehavior",
-                    "propertyValues": {}
-                  },
-                  "id": "2"
                 }
               ],
               "position": {

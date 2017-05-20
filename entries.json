@@ -30,26 +30,6 @@
           "id": "89",
           "name": "Game",
           "type": "scene"
-        },
-        {
-          "id": "8",
-          "name": "Board",
-          "type": "scene"
-        },
-        {
-          "id": "56",
-          "name": "GameOver",
-          "type": "scene"
-        },
-        {
-          "id": "60",
-          "name": "GameWin",
-          "type": "scene"
-        },
-        {
-          "id": "61",
-          "name": "ArrivedHome",
-          "type": "scene"
         }
       ]
     },
@@ -215,100 +195,6 @@
         {
           "id": "107",
           "name": "MarkChalk",
-          "type": "sprite"
-        }
-      ]
-    },
-    {
-      "id": "0",
-      "name": "BoardSprites",
-      "type": null,
-      "children": [
-        {
-          "id": "2",
-          "name": "Board",
-          "type": "sprite"
-        },
-        {
-          "id": "3",
-          "name": "Pin_Mother",
-          "type": "sprite"
-        },
-        {
-          "id": "4",
-          "name": "Pin_Father",
-          "type": "sprite"
-        },
-        {
-          "id": "5",
-          "name": "Pin_Child",
-          "type": "sprite"
-        },
-        {
-          "id": "18",
-          "name": "Question_Mother",
-          "type": "sprite"
-        },
-        {
-          "id": "19",
-          "name": "Question_Father",
-          "type": "sprite"
-        },
-        {
-          "id": "20",
-          "name": "Question_Child",
-          "type": "sprite"
-        },
-        {
-          "id": "62",
-          "name": "Arrived",
-          "type": "sprite"
-        },
-        {
-          "id": "63",
-          "name": "StarNight",
-          "type": "sprite"
-        },
-        {
-          "id": "64",
-          "name": "NightSky",
-          "type": "sprite"
-        }
-      ]
-    },
-    {
-      "id": "30",
-      "name": "DialogSprites",
-      "type": null,
-      "children": [
-        {
-          "id": "31",
-          "name": "Dialogs",
-          "type": "sprite"
-        },
-        {
-          "id": "33",
-          "name": "Info",
-          "type": "sprite"
-        },
-        {
-          "id": "36",
-          "name": "Border",
-          "type": "sprite"
-        },
-        {
-          "id": "41",
-          "name": "Option",
-          "type": "sprite"
-        },
-        {
-          "id": "59",
-          "name": "GameWin",
-          "type": "sprite"
-        },
-        {
-          "id": "57",
-          "name": "GameOver",
           "type": "sprite"
         }
       ]

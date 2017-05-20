@@ -67,3 +67,10 @@ namespace Game{
   }
   
 }
+
+/*
+[ ] Troca de personagem
+[ ] Barras
+[ ] Verificar se já não excedeu limite de erro ou acerto
+[ ] Game over e game win
+*/

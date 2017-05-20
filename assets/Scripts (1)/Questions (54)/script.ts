@@ -6,7 +6,7 @@ class NextSignBehavior extends Sup.Behavior {
   awake() {
     ray = new Sup.Math.Ray(this.actor.getPosition(), new Sup.Math.Vector3(0, 0, -1));
       
-    //#############Just to have something to initialize the motion right now
+    //To initialize the game
     Game.startGame();
       
   }
@@ -15,6 +15,7 @@ class NextSignBehavior extends Sup.Behavior {
     if(action == "click"){
 
         //##########Need some code to go to the next question
+        Game.nextTurn();
     
     }
     else if(action == "hover"){
@@ -112,7 +113,7 @@ namespace Questions {
       let name = "Alternative" + index.toString();
 
       // get the actor from the Game scene
-      let optionText = Sup.getActor("Question").getChild(name);
+      let optionText = Sup.getActor(name);
       let optionMark = Sup.getActor("MarkChalk"+index);
 
       // push the option array in OPTIONS array to the next index
@@ -137,6 +138,8 @@ namespace Questions {
       OPTIONS[i][0].textRenderer.setText(qtexts["q"+player+"_"+number+"option"+i]);
     }
     Questions.rightOption=qtexts["q"+player+"_"+number+"right"];
+    Sup.getActor("RightChalk").setParent(OPTIONS[Questions.rightOption][0])
+    Sup.getActor("RightChalk").setLocalY(-0.2);
   }
   
   //Show new question
@@ -144,9 +147,12 @@ namespace Questions {
     loadNewQuestion(actualPlayer,questionNumber);
     Sup.getActor("Question").getBehavior(TextBehavior).getReady();
     for (var i=0; i<=2; i++){
-      OPTIONS[i][0].addBehavior(TextBehavior);
+      OPTIONS[i][0].addBehavior(QuestionBehavior);
       OPTIONS[i][0].getBehavior(TextBehavior).getReady();
     }
+    Sup.setTimeout(waitTime, function(){
+        SetSign("Question");
+    })
   }
 
   export function clearQuestion(){
@@ -160,29 +166,31 @@ namespace Questions {
   
   
   export function solveQuestion(){
-
-    Sup.getActor("QuestionDialog").getBehavior(QuestionBehavior).destroy();
       
-    //right answer
-    if(selectedOption === rightOption){
-      Sup.getActor("QuestionDialog").getChild("HeaderQuestion").spriteRenderer.setAnimation("right");
-      Sup.getActor("QuestionDialog").getChild("Title").textRenderer.setText("Muito bom! Sua RESPOSTA está CORRETA! =)\nMais um passo em segurança. ");
-    }
-    //wrong answer
-    else{
-      Sup.getActor("QuestionDialog").getChild("HeaderQuestion").spriteRenderer.setAnimation("wrong");
-      Sup.getActor("QuestionDialog").getChild("Title").textRenderer.setText("RESPOSTA ERRADA. Melhor não avançar se a segurança\nestá em risco. Tente mais uma vez =)");
-    }
-    questionNumber=questionNumber++;
+    //Destroy behavior to stop the hover effect on options
+    Sup.getActor("Alternative0").getBehavior(QuestionBehavior).destroy();
+    Sup.getActor("Alternative1").getBehavior(QuestionBehavior).destroy();
+    Sup.getActor("Alternative2").getBehavior(QuestionBehavior).destroy();
+      
+    Sup.setTimeout(waitTime/4, function(){
+        //right answer
+        if(selectedOption === rightOption){
+          SetSign("Right");
+        }
+        //wrong answer
+        else{
+          SetSign("Wrong");
+        }
+    })
+    questionNumber++;
     //Reveals right and wrong answers
-    for (var i=0; i<=2; i++){
-      if(i === rightOption){
-        OPTIONS[i][1].textRenderer.setColor(ColorTextGreen); 
-      }
-      else if(OPTIONS[i][2]==="selected"){
-        OPTIONS[i][1].textRenderer.setColor(ColorTextRed); 
-      }
-    }
+    Sup.setTimeout(1.2*waitTime, function(){
+        Sup.getActor("RightChalk").setVisible(true);
+        Sup.setTimeout(waitTime, function(){
+            clearOptionsArray();
+            SetSign("Next");
+        })
+    })
   }
   
 }
@@ -210,13 +218,12 @@ class QuestionBehavior extends Sup.Behavior {
         if(Questions.selectedOption != -1 && Questions.selectedOption != option){
           OPTIONS[Questions.selectedOption][2].setVisible(false);
           OPTIONS[Questions.selectedOption][1] = "unHover";
-        }
-        OPTIONS[option][2].spriteRenderer.setOpacity(1)
-        OPTIONS[option][2].setVisible(true);  
-
-        Questions.selectedOption = option;
-        //#############SOME CODE TO TRIGGER SOLVE QUESTION
+        } 
       }
+      OPTIONS[option][2].spriteRenderer.setOpacity(1)
+      OPTIONS[option][2].setVisible(true); 
+      Questions.selectedOption = option;
+      Questions.solveQuestion();
     }
   }
 
