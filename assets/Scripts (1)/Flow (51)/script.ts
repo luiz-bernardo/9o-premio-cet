@@ -91,6 +91,9 @@ class StandardButtonBehavior extends Sup.Behavior {
   soundToPlayOnClick: string = "Toc";
   turnOffLoadScene: boolean = false;
   sceneToLoad: string = "Menu";
+  turnOnCameraMove: boolean = false;
+  cameraYMove: number = 0;
+    
 
   awake() {
     ray = new Sup.Math.Ray(this.actor.getPosition(), new Sup.Math.Vector3(0, 0, -1));
@@ -103,6 +106,9 @@ class StandardButtonBehavior extends Sup.Behavior {
       }
       if (!this.turnOffLoadScene){
         Sup.loadScene("Scenes/"+this.sceneToLoad);
+      }
+      if (this.turnOnCameraMove){
+        Sup.getActor("Camera").setY(this.cameraYMove);
       }
     }
     else if(action == "hover"){
@@ -133,7 +139,6 @@ class StandardButtonBehavior extends Sup.Behavior {
   }
 }
 Sup.registerBehavior(StandardButtonBehavior);
-
 
 class ExitOptionBehavior extends Sup.Behavior {
   // flag to tell when the mouse hover the button
@@ -177,3 +182,49 @@ class ExitOptionBehavior extends Sup.Behavior {
 }
 Sup.registerBehavior(ExitOptionBehavior);
 
+class charChoiceButtonBehavior extends Sup.Behavior {
+  // flag to tell when the mouse hover the button
+  isHover : boolean = false;
+  turnOffOnClickSound : boolean = false;
+  soundToPlayOnClick: string = "Toc";
+  characterNumber: number=0;
+
+  awake() {
+    ray = new Sup.Math.Ray(this.actor.getPosition(), new Sup.Math.Vector3(0, 0, -1));
+  }
+
+  mouse(action) {
+    if(action == "click"){
+      if (!this.turnOffOnClickSound){
+        Sup.Audio.playSound("Sounds/"+this.soundToPlayOnClick); 
+      }
+      Game.startGame(this.characterNumber);
+    }
+    else if(action == "hover"){
+      this.actor.spriteRenderer.setAnimation("hover");
+    }
+    else if(action == "unhover"){
+      this.actor.spriteRenderer.setAnimation("unhover");
+    }
+  }
+
+  update() {
+    ray.setFromCamera(Sup.getActor("Camera").camera, Sup.Input.getMousePosition());
+
+    if(ray.intersectActor(this.actor, false).length > 0){
+      if(!this.isHover){
+        this.mouse("hover");
+        this.isHover = true;
+      }
+      if(Sup.Input.wasMouseButtonJustPressed(0)){
+        this.mouse("click")
+      }
+    }
+    else if(this.isHover){
+      this.isHover = false;
+      this.mouse("unhover")
+    }
+
+  }
+}
+Sup.registerBehavior(charChoiceButtonBehavior);

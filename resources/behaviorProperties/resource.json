@@ -2,7 +2,7 @@
   "behaviors": {
     "ExitOptionBehavior": {
       "scriptId": "51",
-      "line": 137,
+      "line": 142,
       "parentBehavior": null,
       "properties": [
         {
@@ -35,6 +35,14 @@
         {
           "name": "sceneToLoad",
           "type": "string"
+        },
+        {
+          "name": "turnOnCameraMove",
+          "type": "boolean"
+        },
+        {
+          "name": "cameraYMove",
+          "type": "number"
         }
       ]
     },
@@ -63,13 +71,13 @@
     },
     "QuestionBehavior": {
       "scriptId": "54",
-      "line": 173,
+      "line": 167,
       "parentBehavior": null,
       "properties": []
     },
     "TextBehavior": {
       "scriptId": "54",
-      "line": 273,
+      "line": 267,
       "parentBehavior": null,
       "properties": [
         {
@@ -86,6 +94,29 @@
         {
           "name": "isHover",
           "type": "boolean"
+        }
+      ]
+    },
+    "charChoiceButtonBehavior": {
+      "scriptId": "51",
+      "line": 184,
+      "parentBehavior": null,
+      "properties": [
+        {
+          "name": "isHover",
+          "type": "boolean"
+        },
+        {
+          "name": "turnOffOnClickSound",
+          "type": "boolean"
+        },
+        {
+          "name": "soundToPlayOnClick",
+          "type": "string"
+        },
+        {
+          "name": "characterNumber",
+          "type": "number"
         }
       ]
     }

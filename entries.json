@@ -1,5 +1,5 @@
 {
-  "nextEntryId": 114,
+  "nextEntryId": 126,
   "nodes": [
     {
       "id": "10",
@@ -12,13 +12,13 @@
           "type": "scene"
         },
         {
-          "id": "77",
-          "name": "About",
+          "id": "65",
+          "name": "Intro1",
           "type": "scene"
         },
         {
-          "id": "65",
-          "name": "Intro",
+          "id": "117",
+          "name": "Intro2",
           "type": "scene"
         },
         {
@@ -29,6 +29,16 @@
         {
           "id": "89",
           "name": "Game",
+          "type": "scene"
+        },
+        {
+          "id": "121",
+          "name": "Prefab_Info",
+          "type": "scene"
+        },
+        {
+          "id": "125",
+          "name": "Prefab_Educational",
           "type": "scene"
         }
       ]
@@ -102,12 +112,37 @@
         },
         {
           "id": "80",
-          "name": "IntroScreen",
+          "name": "Intro1Screen",
+          "type": "sprite"
+        },
+        {
+          "id": "115",
+          "name": "Intro2Screen",
+          "type": "sprite"
+        },
+        {
+          "id": "122",
+          "name": "Educational1Screen",
+          "type": "sprite"
+        },
+        {
+          "id": "123",
+          "name": "Educational2Screen",
+          "type": "sprite"
+        },
+        {
+          "id": "124",
+          "name": "Educational3Screen",
           "type": "sprite"
         },
         {
           "id": "81",
           "name": "NextButton",
+          "type": "sprite"
+        },
+        {
+          "id": "116",
+          "name": "ReturnButton",
           "type": "sprite"
         },
         {
@@ -133,6 +168,16 @@
         {
           "id": "87",
           "name": "DriverOption",
+          "type": "sprite"
+        },
+        {
+          "id": "119",
+          "name": "About1Screen",
+          "type": "sprite"
+        },
+        {
+          "id": "120",
+          "name": "About2Screen",
           "type": "sprite"
         }
       ]

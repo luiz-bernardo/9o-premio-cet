@@ -1,0 +1,383 @@
+{
+  "formatVersion": 1,
+  "nodes": [
+    {
+      "id": "54",
+      "name": "InfoScreens",
+      "children": [
+        {
+          "id": "1",
+          "name": "BackgroundInfo1",
+          "children": [
+            {
+              "id": "48",
+              "name": "NextInfo1",
+              "children": [
+                {
+                  "id": "50",
+                  "name": "ReturnInfo1",
+                  "children": [],
+                  "components": [
+                    {
+                      "type": "SpriteRenderer",
+                      "config": {
+                        "formatVersion": 1,
+                        "spriteAssetId": "116",
+                        "animationId": null,
+                        "horizontalFlip": false,
+                        "verticalFlip": false,
+                        "castShadow": false,
+                        "receiveShadow": false,
+                        "color": "ffffff",
+                        "overrideOpacity": false,
+                        "opacity": null,
+                        "materialType": "basic",
+                        "shaderAssetId": null
+                      },
+                      "id": "0"
+                    },
+                    {
+                      "type": "Behavior",
+                      "config": {
+                        "behaviorName": "StandardButtonBehavior",
+                        "propertyValues": {
+                          "turnOffLoadScene": {
+                            "type": "boolean",
+                            "value": true
+                          },
+                          "turnOnCameraMove": {
+                            "type": "boolean",
+                            "value": true
+                          },
+                          "cameraYMove": {
+                            "type": "number",
+                            "value": 0
+                          }
+                        }
+                      },
+                      "id": "1"
+                    }
+                  ],
+                  "position": {
+                    "x": -7.13,
+                    "y": 0,
+                    "z": 0
+                  },
+                  "orientation": {
+                    "x": 0,
+                    "y": 0,
+                    "z": 0,
+                    "w": 1
+                  },
+                  "scale": {
+                    "x": 1,
+                    "y": 1,
+                    "z": 1
+                  },
+                  "visible": true,
+                  "layer": 0,
+                  "prefab": null
+                }
+              ],
+              "components": [
+                {
+                  "type": "SpriteRenderer",
+                  "config": {
+                    "formatVersion": 1,
+                    "spriteAssetId": "81",
+                    "animationId": null,
+                    "horizontalFlip": false,
+                    "verticalFlip": false,
+                    "castShadow": false,
+                    "receiveShadow": false,
+                    "color": "ffffff",
+                    "overrideOpacity": false,
+                    "opacity": null,
+                    "materialType": "basic",
+                    "shaderAssetId": null
+                  },
+                  "id": "0"
+                },
+                {
+                  "type": "Behavior",
+                  "config": {
+                    "behaviorName": "StandardButtonBehavior",
+                    "propertyValues": {
+                      "turnOffLoadScene": {
+                        "type": "boolean",
+                        "value": true
+                      },
+                      "turnOnCameraMove": {
+                        "type": "boolean",
+                        "value": true
+                      },
+                      "cameraYMove": {
+                        "type": "number",
+                        "value": 40
+                      }
+                    }
+                  },
+                  "id": "1"
+                }
+              ],
+              "position": {
+                "x": 4.5,
+                "y": -2.700000047683716,
+                "z": 1
+              },
+              "orientation": {
+                "x": 0,
+                "y": 0,
+                "z": 0,
+                "w": 1
+              },
+              "scale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+              },
+              "visible": true,
+              "layer": 0,
+              "prefab": null
+            }
+          ],
+          "components": [
+            {
+              "type": "SpriteRenderer",
+              "config": {
+                "spriteAssetId": "119",
+                "animationId": null,
+                "horizontalFlip": false,
+                "verticalFlip": false,
+                "castShadow": false,
+                "receiveShadow": false,
+                "color": "ffffff",
+                "overrideOpacity": false,
+                "opacity": null,
+                "materialType": "basic",
+                "shaderAssetId": null,
+                "formatVersion": 1
+              },
+              "id": "0"
+            }
+          ],
+          "position": {
+            "x": 0,
+            "y": 20,
+            "z": 0
+          },
+          "orientation": {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "w": 1
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          },
+          "visible": true,
+          "layer": 0,
+          "prefab": null
+        },
+        {
+          "id": "51",
+          "name": "BackgroundInfo2",
+          "children": [
+            {
+              "id": "52",
+              "name": "NextInfo2",
+              "children": [
+                {
+                  "id": "53",
+                  "name": "ReturnInfo2",
+                  "children": [],
+                  "components": [
+                    {
+                      "type": "SpriteRenderer",
+                      "config": {
+                        "formatVersion": 1,
+                        "spriteAssetId": "116",
+                        "animationId": null,
+                        "horizontalFlip": false,
+                        "verticalFlip": false,
+                        "castShadow": false,
+                        "receiveShadow": false,
+                        "color": "ffffff",
+                        "overrideOpacity": false,
+                        "opacity": null,
+                        "materialType": "basic",
+                        "shaderAssetId": null
+                      },
+                      "id": "0"
+                    },
+                    {
+                      "type": "Behavior",
+                      "config": {
+                        "behaviorName": "StandardButtonBehavior",
+                        "propertyValues": {
+                          "turnOffLoadScene": {
+                            "type": "boolean",
+                            "value": true
+                          },
+                          "turnOnCameraMove": {
+                            "type": "boolean",
+                            "value": true
+                          },
+                          "cameraYMove": {
+                            "type": "number",
+                            "value": 20
+                          }
+                        }
+                      },
+                      "id": "1"
+                    }
+                  ],
+                  "position": {
+                    "x": -7.13,
+                    "y": 0,
+                    "z": 0
+                  },
+                  "orientation": {
+                    "x": 0,
+                    "y": 0,
+                    "z": 0,
+                    "w": 1
+                  },
+                  "scale": {
+                    "x": 1,
+                    "y": 1,
+                    "z": 1
+                  },
+                  "visible": true,
+                  "layer": 0,
+                  "prefab": null
+                }
+              ],
+              "components": [
+                {
+                  "type": "SpriteRenderer",
+                  "config": {
+                    "formatVersion": 1,
+                    "spriteAssetId": "81",
+                    "animationId": null,
+                    "horizontalFlip": false,
+                    "verticalFlip": false,
+                    "castShadow": false,
+                    "receiveShadow": false,
+                    "color": "ffffff",
+                    "overrideOpacity": false,
+                    "opacity": null,
+                    "materialType": "basic",
+                    "shaderAssetId": null
+                  },
+                  "id": "0"
+                },
+                {
+                  "type": "Behavior",
+                  "config": {
+                    "behaviorName": "StandardButtonBehavior",
+                    "propertyValues": {
+                      "turnOffLoadScene": {
+                        "type": "boolean",
+                        "value": true
+                      },
+                      "turnOnCameraMove": {
+                        "type": "boolean",
+                        "value": true
+                      },
+                      "cameraYMove": {
+                        "type": "number",
+                        "value": 0
+                      }
+                    }
+                  },
+                  "id": "1"
+                }
+              ],
+              "position": {
+                "x": 4.5,
+                "y": -2.700000047683716,
+                "z": 1
+              },
+              "orientation": {
+                "x": 0,
+                "y": 0,
+                "z": 0,
+                "w": 1
+              },
+              "scale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+              },
+              "visible": true,
+              "layer": 0,
+              "prefab": null
+            }
+          ],
+          "components": [
+            {
+              "type": "SpriteRenderer",
+              "config": {
+                "spriteAssetId": "120",
+                "animationId": null,
+                "horizontalFlip": false,
+                "verticalFlip": false,
+                "castShadow": false,
+                "receiveShadow": false,
+                "color": "ffffff",
+                "overrideOpacity": false,
+                "opacity": null,
+                "materialType": "basic",
+                "shaderAssetId": null,
+                "formatVersion": 1
+              },
+              "id": "0"
+            }
+          ],
+          "position": {
+            "x": 0,
+            "y": 40,
+            "z": 0
+          },
+          "orientation": {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "w": 1
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          },
+          "visible": true,
+          "layer": 0,
+          "prefab": null
+        }
+      ],
+      "components": [],
+      "position": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "orientation": {
+        "x": 0,
+        "y": 0,
+        "z": 0,
+        "w": 1
+      },
+      "scale": {
+        "x": 1,
+        "y": 1,
+        "z": 1
+      },
+      "visible": true,
+      "layer": 0,
+      "prefab": null
+    }
+  ]
+}

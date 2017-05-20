@@ -58,12 +58,16 @@ namespace Game{
     Sup.loadScene("Scenes/Menu");
   }
   
-  export function startGame(){
-    Questions.setOptionsArray();
-    Questions.clearQuestion();
-    Questions.showNewQuestion();
+  export function startGame(characterNum=0){
+    Sup.loadScene("Scenes/Game");
+    actualPlayer=characterNum;
     Sup.getActor("GoodBar").setLocalX(-2.65);
     Sup.getActor("BadBar").setLocalX(2.65);
+    Questions.setOptionsArray();
+    Questions.clearQuestion();
+    Sup.setTimeout(1.5*waitTime, function(){
+        Questions.showNewQuestion();
+    })
   }
   
   export function nextTurn(){

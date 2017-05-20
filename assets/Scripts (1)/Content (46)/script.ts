@@ -84,13 +84,13 @@ Questions.qtexts = {
     q2_2option2: "C) Um na pista e o outro na calçada",
     q2_2right: 0,
 
-    q2_1question: "Quais são os equipamentos de proteção altamente recomendados para o Vinícius?",
+    q2_1question: "Que outros equipamentos de proteção são altamente recomendados para o Vinícius?",
     q2_1option0: "A) Capacete; viseira ou óculos protetores e vestuário de proteção",
     q2_1option1: "B) Não é necessário que o Vinícius se proteja",
     q2_1option2: "C) O Vinícius deve vestir capacete fechado, jaqueta emborrachada e botas",
     q2_1right: 0,
 
-    q2_0question: "Que outros equipamentos de proteção são altamente recomendados para o Vinícius?",
+    q2_0question: "Quais equipamentos de proteção são altamente recomendados para o Vinícius?",
     q2_0option0: "A) Espelho retrovisor do lado esquerdo e campainha",
     q2_0option1: "B) Sinalização noturna dianteira, traseira, lateral e nos pedais,",
     q2_0option2: "C) Todos os acessórios anteriores",

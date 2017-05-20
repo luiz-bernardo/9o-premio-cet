@@ -180,11 +180,11 @@
                     {
                       "type": "Behavior",
                       "config": {
-                        "behaviorName": "StandardButtonBehavior",
+                        "behaviorName": "charChoiceButtonBehavior",
                         "propertyValues": {
-                          "sceneToLoad": {
-                            "type": "string",
-                            "value": "Board"
+                          "characterNumber": {
+                            "type": "number",
+                            "value": 3
                           }
                         }
                       },
@@ -234,11 +234,11 @@
                 {
                   "type": "Behavior",
                   "config": {
-                    "behaviorName": "StandardButtonBehavior",
+                    "behaviorName": "charChoiceButtonBehavior",
                     "propertyValues": {
-                      "sceneToLoad": {
-                        "type": "string",
-                        "value": "Board"
+                      "characterNumber": {
+                        "type": "number",
+                        "value": 1
                       }
                     }
                   },
@@ -288,11 +288,11 @@
             {
               "type": "Behavior",
               "config": {
-                "behaviorName": "StandardButtonBehavior",
+                "behaviorName": "charChoiceButtonBehavior",
                 "propertyValues": {
-                  "sceneToLoad": {
-                    "type": "string",
-                    "value": "Board"
+                  "characterNumber": {
+                    "type": "number",
+                    "value": 2
                   }
                 }
               },
@@ -342,11 +342,11 @@
         {
           "type": "Behavior",
           "config": {
-            "behaviorName": "StandardButtonBehavior",
+            "behaviorName": "charChoiceButtonBehavior",
             "propertyValues": {
-              "sceneToLoad": {
-                "type": "string",
-                "value": "Game"
+              "characterNumber": {
+                "type": "number",
+                "value": 0
               }
             }
           },

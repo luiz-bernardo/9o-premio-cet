@@ -6,17 +6,11 @@ class NextSignBehavior extends Sup.Behavior {
   awake() {
     ray = new Sup.Math.Ray(this.actor.getPosition(), new Sup.Math.Vector3(0, 0, -1));
       
-    //To initialize the game
-    Game.startGame();
-      
   }
 
   mouse(action) {
     if(action == "click"){
-
-        //##########Need some code to go to the next question
         Game.nextTurn();
-    
     }
     else if(action == "hover"){
       this.actor.spriteRenderer.setAnimation("hover");

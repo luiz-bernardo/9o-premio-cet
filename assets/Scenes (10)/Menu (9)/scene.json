@@ -102,7 +102,7 @@
             "propertyValues": {
               "sceneToLoad": {
                 "type": "string",
-                "value": "Intro"
+                "value": "Intro1"
               }
             }
           },
@@ -182,7 +182,20 @@
                   "type": "Behavior",
                   "config": {
                     "behaviorName": "StandardButtonBehavior",
-                    "propertyValues": {}
+                    "propertyValues": {
+                      "turnOffLoadScene": {
+                        "type": "boolean",
+                        "value": true
+                      },
+                      "cameraYMove": {
+                        "type": "number",
+                        "value": 60
+                      },
+                      "turnOnCameraMove": {
+                        "type": "boolean",
+                        "value": true
+                      }
+                    }
                   },
                   "id": "2"
                 }
@@ -232,9 +245,17 @@
               "config": {
                 "behaviorName": "StandardButtonBehavior",
                 "propertyValues": {
-                  "sceneToLoad": {
-                    "type": "string",
-                    "value": "About"
+                  "turnOffLoadScene": {
+                    "type": "boolean",
+                    "value": true
+                  },
+                  "turnOnCameraMove": {
+                    "type": "boolean",
+                    "value": true
+                  },
+                  "cameraYMove": {
+                    "type": "number",
+                    "value": 20
                   }
                 }
               },
@@ -309,6 +330,60 @@
       "visible": true,
       "layer": 0,
       "prefab": null
+    },
+    {
+      "id": "10",
+      "name": "InfoScreens",
+      "children": [],
+      "components": [],
+      "position": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "orientation": {
+        "x": 0,
+        "y": 0,
+        "z": 0,
+        "w": 1
+      },
+      "scale": {
+        "x": 1,
+        "y": 1,
+        "z": 1
+      },
+      "visible": true,
+      "layer": 0,
+      "prefab": {
+        "sceneAssetId": "121"
+      }
+    },
+    {
+      "id": "12",
+      "name": "EduScreens",
+      "children": [],
+      "components": [],
+      "position": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "orientation": {
+        "x": 0,
+        "y": 0,
+        "z": 0,
+        "w": 1
+      },
+      "scale": {
+        "x": 1,
+        "y": 1,
+        "z": 1
+      },
+      "visible": true,
+      "layer": 0,
+      "prefab": {
+        "sceneAssetId": "125"
+      }
     }
   ]
 }
