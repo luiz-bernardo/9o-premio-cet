@@ -1,5 +1,5 @@
 {
-  "nextEntryId": 126,
+  "nextEntryId": 132,
   "nodes": [
     {
       "id": "10",
@@ -29,6 +29,16 @@
         {
           "id": "89",
           "name": "Game",
+          "type": "scene"
+        },
+        {
+          "id": "128",
+          "name": "PlayerWin",
+          "type": "scene"
+        },
+        {
+          "id": "131",
+          "name": "PlayerLose",
           "type": "scene"
         },
         {
@@ -143,6 +153,11 @@
         {
           "id": "116",
           "name": "ReturnButton",
+          "type": "sprite"
+        },
+        {
+          "id": "129",
+          "name": "ExitButton2",
           "type": "sprite"
         },
         {
@@ -265,6 +280,16 @@
         {
           "id": "110",
           "name": "BadScore",
+          "type": "sprite"
+        },
+        {
+          "id": "126",
+          "name": "PlayerWin",
+          "type": "sprite"
+        },
+        {
+          "id": "127",
+          "name": "PlayerLose",
           "type": "sprite"
         }
       ]

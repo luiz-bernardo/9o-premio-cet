@@ -5,7 +5,6 @@ class NextSignBehavior extends Sup.Behavior {
 
   awake() {
     ray = new Sup.Math.Ray(this.actor.getPosition(), new Sup.Math.Vector3(0, 0, -1));
-      
   }
 
   mouse(action) {
