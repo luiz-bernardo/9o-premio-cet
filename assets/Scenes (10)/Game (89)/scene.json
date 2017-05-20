@@ -11,7 +11,7 @@
           "config": {
             "mode": "orthographic",
             "fov": 45,
-            "orthographicScale": 7.69,
+            "orthographicScale": 7.68,
             "viewport": {
               "x": 0,
               "y": 0,
@@ -329,7 +329,7 @@
                     "text": "A) Atravessar em linha reta e somente quando puder\ngarantir que já tempo de sobra para a travessia, com\npassos rápidos e firmes, mas sem a necessidade de correr.",
                     "alignment": "left",
                     "verticalAlignment": "top",
-                    "size": 52,
+                    "size": 51,
                     "color": null,
                     "overrideOpacity": false,
                     "opacity": null
@@ -347,7 +347,7 @@
               ],
               "position": {
                 "x": 0,
-                "y": -1.2000000476837158,
+                "y": -1.15,
                 "z": 0
               },
               "orientation": {
@@ -467,7 +467,7 @@
                     "text": "B) Atravessar em linha reta e somente quando puder\ngarantir que já tempo de sobra para a travessia, com\npassos rápidos e firmes, mas sem a necessidade de correr.",
                     "alignment": "left",
                     "verticalAlignment": "top",
-                    "size": 52,
+                    "size": 51,
                     "color": null,
                     "overrideOpacity": false,
                     "opacity": null
@@ -561,7 +561,7 @@
                     "text": "C) Atravessar em linha reta e somente quando puder\ngarantir que já tempo de sobra para a travessia, com\npassos rápidos e firmes, mas sem a necessidade de correr.",
                     "alignment": "left",
                     "verticalAlignment": "top",
-                    "size": 52,
+                    "size": 51,
                     "color": null,
                     "overrideOpacity": false,
                     "opacity": null
@@ -579,7 +579,7 @@
               ],
               "position": {
                 "x": 0,
-                "y": -3,
+                "y": -3.05,
                 "z": 0
               },
               "orientation": {
@@ -607,7 +607,7 @@
                 "text": "5. Eduardo trabalha próximo ao hospital da cidade. Se\numa ambulância, com sirene ligada, se aproximar dele no\nmomento que ele estiver para cruzar a pista, qual deve ser\nsua reação?",
                 "alignment": "left",
                 "verticalAlignment": "top",
-                "size": 52,
+                "size": 51,
                 "color": null,
                 "overrideOpacity": false,
                 "opacity": null
@@ -825,6 +825,272 @@
       "prefab": null
     },
     {
+      "id": "66",
+      "name": "GoodGauge",
+      "children": [
+        {
+          "id": "68",
+          "name": "GoodBar",
+          "children": [],
+          "components": [
+            {
+              "type": "SpriteRenderer",
+              "config": {
+                "formatVersion": 1,
+                "spriteAssetId": "111",
+                "animationId": null,
+                "horizontalFlip": false,
+                "verticalFlip": false,
+                "castShadow": false,
+                "receiveShadow": false,
+                "color": "ffffff",
+                "overrideOpacity": false,
+                "opacity": null,
+                "materialType": "basic",
+                "shaderAssetId": null
+              },
+              "id": "0"
+            }
+          ],
+          "position": {
+            "x": -2.65,
+            "y": 0,
+            "z": -0.5
+          },
+          "orientation": {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "w": 1
+          },
+          "scale": {
+            "x": 1.006,
+            "y": 1,
+            "z": 1
+          },
+          "visible": true,
+          "layer": 0,
+          "prefab": null
+        },
+        {
+          "id": "71",
+          "name": "GoodHideout",
+          "children": [],
+          "components": [
+            {
+              "type": "SpriteRenderer",
+              "config": {
+                "formatVersion": 1,
+                "spriteAssetId": "113",
+                "animationId": null,
+                "horizontalFlip": false,
+                "verticalFlip": false,
+                "castShadow": false,
+                "receiveShadow": false,
+                "color": "ffffff",
+                "overrideOpacity": false,
+                "opacity": null,
+                "materialType": "basic",
+                "shaderAssetId": null
+              },
+              "id": "0"
+            }
+          ],
+          "position": {
+            "x": -1.55,
+            "y": 0,
+            "z": -0.25
+          },
+          "orientation": {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "w": 1
+          },
+          "scale": {
+            "x": 1,
+            "y": 0.6,
+            "z": 1
+          },
+          "visible": true,
+          "layer": 0,
+          "prefab": null
+        }
+      ],
+      "components": [
+        {
+          "type": "SpriteRenderer",
+          "config": {
+            "formatVersion": 1,
+            "spriteAssetId": "109",
+            "animationId": null,
+            "horizontalFlip": false,
+            "verticalFlip": false,
+            "castShadow": false,
+            "receiveShadow": false,
+            "color": "ffffff",
+            "overrideOpacity": false,
+            "opacity": null,
+            "materialType": "basic",
+            "shaderAssetId": null
+          },
+          "id": "0"
+        }
+      ],
+      "position": {
+        "x": -4.15,
+        "y": 3.25,
+        "z": 1
+      },
+      "orientation": {
+        "x": 0,
+        "y": 0,
+        "z": 0,
+        "w": 1
+      },
+      "scale": {
+        "x": 0.999999983725305,
+        "y": 1,
+        "z": 0.999999983725305
+      },
+      "visible": true,
+      "layer": 0,
+      "prefab": null
+    },
+    {
+      "id": "67",
+      "name": "BadGauge",
+      "children": [
+        {
+          "id": "69",
+          "name": "BadBar",
+          "children": [],
+          "components": [
+            {
+              "type": "SpriteRenderer",
+              "config": {
+                "formatVersion": 1,
+                "spriteAssetId": "112",
+                "animationId": null,
+                "horizontalFlip": false,
+                "verticalFlip": false,
+                "castShadow": false,
+                "receiveShadow": false,
+                "color": "ffffff",
+                "overrideOpacity": false,
+                "opacity": null,
+                "materialType": "basic",
+                "shaderAssetId": null
+              },
+              "id": "0"
+            }
+          ],
+          "position": {
+            "x": 2.65,
+            "y": 0,
+            "z": -0.5
+          },
+          "orientation": {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "w": 1
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          },
+          "visible": true,
+          "layer": 0,
+          "prefab": null
+        },
+        {
+          "id": "72",
+          "name": "BadHideout",
+          "children": [],
+          "components": [
+            {
+              "type": "SpriteRenderer",
+              "config": {
+                "formatVersion": 1,
+                "spriteAssetId": "113",
+                "animationId": null,
+                "horizontalFlip": false,
+                "verticalFlip": false,
+                "castShadow": false,
+                "receiveShadow": false,
+                "color": "ffffff",
+                "overrideOpacity": false,
+                "opacity": null,
+                "materialType": "basic",
+                "shaderAssetId": null
+              },
+              "id": "0"
+            }
+          ],
+          "position": {
+            "x": 1.5,
+            "y": 0,
+            "z": -0.25
+          },
+          "orientation": {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "w": 1
+          },
+          "scale": {
+            "x": 1,
+            "y": 0.6,
+            "z": 1
+          },
+          "visible": true,
+          "layer": 0,
+          "prefab": null
+        }
+      ],
+      "components": [
+        {
+          "type": "SpriteRenderer",
+          "config": {
+            "formatVersion": 1,
+            "spriteAssetId": "110",
+            "animationId": null,
+            "horizontalFlip": false,
+            "verticalFlip": false,
+            "castShadow": false,
+            "receiveShadow": false,
+            "color": "ffffff",
+            "overrideOpacity": false,
+            "opacity": null,
+            "materialType": "basic",
+            "shaderAssetId": null
+          },
+          "id": "0"
+        }
+      ],
+      "position": {
+        "x": 4.23,
+        "y": 3.25,
+        "z": 1
+      },
+      "orientation": {
+        "x": 0,
+        "y": 0,
+        "z": 0,
+        "w": 1
+      },
+      "scale": {
+        "x": 0.999999983725305,
+        "y": 1,
+        "z": 0.999999983725305
+      },
+      "visible": true,
+      "layer": 0,
+      "prefab": null
+    },
+    {
       "id": "54",
       "name": "reference",
       "children": [],
@@ -850,14 +1116,14 @@
       ],
       "position": {
         "x": 0,
-        "y": 0,
+        "y": 4,
         "z": 10
       },
       "orientation": {
         "x": 0,
-        "y": 0.16504760586067765,
+        "y": 0,
         "z": 0,
-        "w": 0.9862856015372314
+        "w": 1
       },
       "scale": {
         "x": 1,

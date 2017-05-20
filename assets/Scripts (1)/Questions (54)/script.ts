@@ -48,34 +48,6 @@ Sup.registerBehavior(NextSignBehavior);
 
 
 function SetSign(whichOne : string){
-
-    function RotateMoveObject(nameActor: string, movementTime : number, degrees : number, moveX : boolean, endingX: number){
-
-        var xStep = 0;
-        var totalRotated = 0;
-
-        var radiansFinal = Sup.Math.toRadians(degrees);
-        var radians = radiansFinal-Sup.getActor(nameActor).getEulerZ();
-        var radianStep = (1000/60)*radians/movementTime;
-
-        if(moveX){
-            xStep = (endingX-Sup.getActor(nameActor).getX())/(60*movementTime/1000);
-        }
-
-        var movementInterval = Sup.setInterval(timeStep, function(){
-
-            if(totalRotated < radians){
-                Sup.getActor(nameActor).rotateEulerZ(radianStep);
-                if(moveX){Sup.getActor(nameActor).moveX(xStep);}
-                totalRotated = totalRotated + radianStep;
-            }
-            else{
-                Sup.getActor(nameActor).setEulerZ(radiansFinal);
-                Sup.getActor(nameActor).setX(endingX);
-                Sup.clearInterval(movementInterval);
-            }
-        })
-    }
     
     if(whichOne == "ResetAll"){
         
@@ -94,8 +66,6 @@ function SetSign(whichOne : string){
     }
     
 }
-
-
 
 
 
@@ -166,6 +136,8 @@ namespace Questions {
   
   
   export function solveQuestion(){
+    
+    var gaugeToFill = null;
       
     //Destroy behavior to stop the hover effect on options
     Sup.getActor("Alternative0").getBehavior(QuestionBehavior).destroy();
@@ -176,16 +148,19 @@ namespace Questions {
         //right answer
         if(selectedOption === rightOption){
           SetSign("Right");
+          gaugeToFill = "good";
         }
         //wrong answer
         else{
           SetSign("Wrong");
+          gaugeToFill = "bad";
         }
     })
     questionNumber++;
-    //Reveals right and wrong answers
-    Sup.setTimeout(1.2*waitTime, function(){
+    //Reveals right and wrong answers after the sign shows up
+    Sup.setTimeout(RightTime+0.5*waitTime, function(){
         Sup.getActor("RightChalk").setVisible(true);
+        Game.scoreMark(gaugeToFill);
         Sup.setTimeout(waitTime, function(){
             clearOptionsArray();
             SetSign("Next");
@@ -264,6 +239,36 @@ class QuestionBehavior extends Sup.Behavior {
   }
 }
 Sup.registerBehavior(QuestionBehavior);
+
+
+function RotateMoveObject(nameActor: string, movementTime : number, degrees : number, moveX : boolean, endingX: number){
+
+    var xStep = 0;
+    var totalRotated = 0;
+
+    var radiansFinal = Sup.Math.toRadians(degrees);
+    var radians = radiansFinal-Sup.getActor(nameActor).getEulerZ();
+    var radianStep = (1000/60)*radians/movementTime;
+
+    if(moveX){
+        xStep = (endingX-Sup.getActor(nameActor).getX())/(60*movementTime/1000);
+    }
+
+    var movementInterval = Sup.setInterval(timeStep, function(){
+
+        if(totalRotated < radians){
+            Sup.getActor(nameActor).rotateEulerZ(radianStep);
+            if(moveX){Sup.getActor(nameActor).moveX(xStep);}
+            totalRotated = totalRotated + radianStep;
+        }
+        else{
+            Sup.getActor(nameActor).setEulerZ(radiansFinal);
+            Sup.getActor(nameActor).setX(endingX);
+            Sup.clearInterval(movementInterval);
+        }
+    })
+}
+
 
 
 class TextBehavior extends Sup.Behavior {

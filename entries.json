@@ -1,5 +1,5 @@
 {
-  "nextEntryId": 109,
+  "nextEntryId": 114,
   "nodes": [
     {
       "id": "10",
@@ -49,13 +49,13 @@
           "type": "script"
         },
         {
-          "id": "92",
-          "name": "SoundTest",
+          "id": "54",
+          "name": "Questions",
           "type": "script"
         },
         {
-          "id": "54",
-          "name": "Questions",
+          "id": "92",
+          "name": "Music",
           "type": "script"
         },
         {
@@ -195,6 +195,31 @@
         {
           "id": "107",
           "name": "MarkChalk",
+          "type": "sprite"
+        },
+        {
+          "id": "109",
+          "name": "GoodScore",
+          "type": "sprite"
+        },
+        {
+          "id": "111",
+          "name": "GoodBar",
+          "type": "sprite"
+        },
+        {
+          "id": "113",
+          "name": "BarHideout",
+          "type": "sprite"
+        },
+        {
+          "id": "112",
+          "name": "BadBar",
+          "type": "sprite"
+        },
+        {
+          "id": "110",
+          "name": "BadScore",
           "type": "sprite"
         }
       ]
