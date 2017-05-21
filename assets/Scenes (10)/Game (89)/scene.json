@@ -1173,21 +1173,42 @@
               "type": "Behavior",
               "config": {
                 "behaviorName": "StandardButtonBehavior",
-                "propertyValues": {}
+                "propertyValues": {
+                  "cameraYMove": {
+                    "type": "number",
+                    "value": 120
+                  },
+                  "turnOffLoadScene": {
+                    "type": "boolean",
+                    "value": true
+                  },
+                  "turnOnCameraMove": {
+                    "type": "boolean",
+                    "value": true
+                  },
+                  "setWhereToGoAfter": {
+                    "type": "boolean",
+                    "value": true
+                  },
+                  "whereToGoAfter": {
+                    "type": "string",
+                    "value": "Menu"
+                  }
+                }
               },
               "id": "1"
             }
           ],
           "position": {
-            "x": 0,
+            "x": 0.03,
             "y": 2.1,
             "z": 0.5
           },
           "orientation": {
             "x": 0,
             "y": 0,
-            "z": 0,
-            "w": 1
+            "z": -0.008726535498373935,
+            "w": 0.9999619230641713
           },
           "scale": {
             "x": 1,
@@ -1225,7 +1246,28 @@
               "type": "Behavior",
               "config": {
                 "behaviorName": "StandardButtonBehavior",
-                "propertyValues": {}
+                "propertyValues": {
+                  "turnOffLoadScene": {
+                    "type": "boolean",
+                    "value": true
+                  },
+                  "turnOnCameraMove": {
+                    "type": "boolean",
+                    "value": true
+                  },
+                  "cameraYMove": {
+                    "type": "number",
+                    "value": 120
+                  },
+                  "setWhereToGoAfter": {
+                    "type": "boolean",
+                    "value": true
+                  },
+                  "whereToGoAfter": {
+                    "type": "string",
+                    "value": "Choice"
+                  }
+                }
               },
               "id": "1"
             }
@@ -1238,8 +1280,8 @@
           "orientation": {
             "x": 0,
             "y": 0,
-            "z": 0.008726535498373935,
-            "w": 0.9999619230641713
+            "z": 0.026176948307873153,
+            "w": 0.9996573249755573
           },
           "scale": {
             "x": 1,
@@ -1277,7 +1319,20 @@
               "type": "Behavior",
               "config": {
                 "behaviorName": "StandardButtonBehavior",
-                "propertyValues": {}
+                "propertyValues": {
+                  "turnOffLoadScene": {
+                    "type": "boolean",
+                    "value": true
+                  },
+                  "turnOnCameraMove": {
+                    "type": "boolean",
+                    "value": true
+                  },
+                  "cameraYMove": {
+                    "type": "number",
+                    "value": 20
+                  }
+                }
               },
               "id": "1"
             }
@@ -1329,7 +1384,20 @@
               "type": "Behavior",
               "config": {
                 "behaviorName": "StandardButtonBehavior",
-                "propertyValues": {}
+                "propertyValues": {
+                  "turnOffLoadScene": {
+                    "type": "boolean",
+                    "value": true
+                  },
+                  "turnOnCameraMove": {
+                    "type": "boolean",
+                    "value": true
+                  },
+                  "cameraYMove": {
+                    "type": "number",
+                    "value": 60
+                  }
+                }
               },
               "id": "1"
             }
@@ -1342,8 +1410,8 @@
           "orientation": {
             "x": 0,
             "y": 0,
-            "z": -0.010471784116245792,
-            "w": 0.9999451693655121
+            "z": -0.023559764833610154,
+            "w": 0.9997224302180006
           },
           "scale": {
             "x": 1,
@@ -1380,8 +1448,29 @@
             {
               "type": "Behavior",
               "config": {
-                "behaviorName": "ExitOptionBehavior",
-                "propertyValues": {}
+                "behaviorName": "StandardButtonBehavior",
+                "propertyValues": {
+                  "turnOffLoadScene": {
+                    "type": "boolean",
+                    "value": true
+                  },
+                  "turnOnCameraMove": {
+                    "type": "boolean",
+                    "value": true
+                  },
+                  "cameraYMove": {
+                    "type": "number",
+                    "value": 120
+                  },
+                  "setWhereToGoAfter": {
+                    "type": "boolean",
+                    "value": true
+                  },
+                  "whereToGoAfter": {
+                    "type": "string",
+                    "value": "ExitGame"
+                  }
+                }
               },
               "id": "1"
             }
@@ -1394,8 +1483,8 @@
           "orientation": {
             "x": 0,
             "y": 0,
-            "z": 0,
-            "w": 1
+            "z": 0.008726535498373935,
+            "w": 0.9999619230641713
           },
           "scale": {
             "x": 1,
@@ -1472,8 +1561,8 @@
         }
       ],
       "position": {
-        "x": 6.8,
-        "y": 0,
+        "x": 0,
+        "y": -2,
         "z": 10
       },
       "orientation": {
@@ -1490,6 +1579,87 @@
       "visible": false,
       "layer": 0,
       "prefab": null
+    },
+    {
+      "id": "81",
+      "name": "Prefab_Info",
+      "children": [],
+      "components": [],
+      "position": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "orientation": {
+        "x": 0,
+        "y": 0,
+        "z": 0,
+        "w": 1
+      },
+      "scale": {
+        "x": 1,
+        "y": 1,
+        "z": 1
+      },
+      "visible": true,
+      "layer": 0,
+      "prefab": {
+        "sceneAssetId": "121"
+      }
+    },
+    {
+      "id": "82",
+      "name": "Prefab_Educational",
+      "children": [],
+      "components": [],
+      "position": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "orientation": {
+        "x": 0,
+        "y": 0,
+        "z": 0,
+        "w": 1
+      },
+      "scale": {
+        "x": 1,
+        "y": 1,
+        "z": 1
+      },
+      "visible": true,
+      "layer": 0,
+      "prefab": {
+        "sceneAssetId": "125"
+      }
+    },
+    {
+      "id": "83",
+      "name": "Prefab_Warning",
+      "children": [],
+      "components": [],
+      "position": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "orientation": {
+        "x": 0,
+        "y": 0,
+        "z": 0,
+        "w": 1
+      },
+      "scale": {
+        "x": 1,
+        "y": 1,
+        "z": 1
+      },
+      "visible": true,
+      "layer": 0,
+      "prefab": {
+        "sceneAssetId": "140"
+      }
     }
   ]
 }

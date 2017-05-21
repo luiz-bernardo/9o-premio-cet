@@ -2,7 +2,7 @@
   "behaviors": {
     "ExitOptionBehavior": {
       "scriptId": "51",
-      "line": 142,
+      "line": 147,
       "parentBehavior": null,
       "properties": [
         {
@@ -43,6 +43,14 @@
         {
           "name": "cameraYMove",
           "type": "number"
+        },
+        {
+          "name": "setWhereToGoAfter",
+          "type": "boolean"
+        },
+        {
+          "name": "whereToGoAfter",
+          "type": "string"
         }
       ]
     },
@@ -99,7 +107,7 @@
     },
     "charChoiceButtonBehavior": {
       "scriptId": "51",
-      "line": 184,
+      "line": 189,
       "parentBehavior": null,
       "properties": [
         {
@@ -122,7 +130,7 @@
     },
     "bushMenuButtonBehavior": {
       "scriptId": "51",
-      "line": 231,
+      "line": 236,
       "parentBehavior": null,
       "properties": [
         {
@@ -140,6 +148,29 @@
         {
           "name": "opened",
           "type": "boolean"
+        }
+      ]
+    },
+    "warningButtonBehavior": {
+      "scriptId": "51",
+      "line": 317,
+      "parentBehavior": null,
+      "properties": [
+        {
+          "name": "isHover",
+          "type": "boolean"
+        },
+        {
+          "name": "turnOffOnClickSound",
+          "type": "boolean"
+        },
+        {
+          "name": "soundToPlayOnClick",
+          "type": "string"
+        },
+        {
+          "name": "whereToSend",
+          "type": "string"
         }
       ]
     }

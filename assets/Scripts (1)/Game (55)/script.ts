@@ -29,7 +29,7 @@ var actualPlayer = 0;
 var opacityMark = 0.651;
 var waitTime = 400;
 var fillGaugeTime = 600;
-var bushAppearanceTime = 1000;
+var bushAppearanceTime = 900;
 var goodMarks = 0
 var badMarks = 0
 

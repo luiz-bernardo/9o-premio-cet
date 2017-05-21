@@ -1,5 +1,5 @@
 {
-  "nextEntryId": 139,
+  "nextEntryId": 141,
   "nodes": [
     {
       "id": "10",
@@ -49,6 +49,11 @@
         {
           "id": "125",
           "name": "Prefab_Educational",
+          "type": "scene"
+        },
+        {
+          "id": "140",
+          "name": "Prefab_Warning",
           "type": "scene"
         }
       ]
@@ -325,6 +330,11 @@
         {
           "id": "137",
           "name": "MenuBushMenu",
+          "type": "sprite"
+        },
+        {
+          "id": "139",
+          "name": "Warning",
           "type": "sprite"
         }
       ]
