@@ -7,9 +7,19 @@ class NextSignBehavior extends Sup.Behavior {
     ray = new Sup.Math.Ray(this.actor.getPosition(), new Sup.Math.Vector3(0, 0, -1));
   }
 
+    //Decide to continue the game or display a message about the victory or lose of the player
   mouse(action) {
+    let winOrLose = Game.scoreMark();
     if(action == "click"){
-        Game.nextTurn();
+        if(winOrLose == 0){
+            Game.nextTurn();
+        }
+        else if(winOrLose>0){
+            Sup.loadScene("Scenes/PlayerWin");
+        }
+        else if(winOrLose<0){
+            Sup.loadScene("Scenes/PlayerLose");
+        }
     }
     else if(action == "hover"){
       this.actor.spriteRenderer.setAnimation("hover");
@@ -266,7 +276,7 @@ function RotateMoveObject(nameActor: string, movementTime : number, degrees : nu
 
 class TextBehavior extends Sup.Behavior {
   
-  charsPerLine = 56;
+  charsPerLine = 58;
 
   private text = "";
   private letterIndex = 0;

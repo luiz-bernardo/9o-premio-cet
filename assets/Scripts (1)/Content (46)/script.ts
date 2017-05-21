@@ -52,7 +52,7 @@ Questions.qtexts = {
     q1_2option2: "C) Avenidas abertas",
     q1_2right: 0,
 
-    q1_1question: "Se escurecer antes de Ana chegar em casa, qual é a melhor atitude para que ele possa evitar o risco de não ser vista pelos carros?",
+    q1_1question: "Se escurecer antes de Ana chegar em casa, qual é a melhor atitude para que ela possa evitar o risco de não ser vista pelos carros?",
     q1_1option0: "A) A responsabilidade de garantir a segurança de Ana é somente dos motoristas.",
     q1_1option1: "B) Vestir um casaco claro",
     q1_1option2: "C) Ligar uma lanterna em direção aos carros que se aproximarem",

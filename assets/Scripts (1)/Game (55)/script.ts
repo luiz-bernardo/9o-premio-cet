@@ -58,7 +58,7 @@ namespace Game{
   }
 
   //fills good and bad scoregauges
-  export function scoreMark(type : string):number{
+  export function scoreMark(type? : string):number{
       
       let posLocalX = 0;
       let xLocalStep = 0;
