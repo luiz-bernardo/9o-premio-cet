@@ -1,6 +1,4 @@
 
-var Music = 1;
-var AllMusics=2;
 let inGameMusicPlayer = new Sup.Audio.SoundPlayer("Sounds/Music"+Music, 1.0);
 
 class SoundButtonBehavior extends Sup.Behavior {
@@ -10,9 +8,21 @@ class SoundButtonBehavior extends Sup.Behavior {
   isPlayButton : boolean = false;
   isNextButton : boolean = false;
   isPreviousButton : boolean = false;
+  stopOnDestroy: boolean = false;
 
   awake() {
     ray = new Sup.Math.Ray(this.actor.getPosition(), new Sup.Math.Vector3(0, 0, -1));
+  }
+    
+  onDestroy(){
+      if(this.stopOnDestroy){
+          inGameMusicPlayer.stop
+      }
+  }
+    
+  automaticPlay(){
+      inGameMusicPlayer.play();
+      this.actor.spriteRenderer.setSprite("GameSprites/PauseButton");
   }
 
   mouse(action) {

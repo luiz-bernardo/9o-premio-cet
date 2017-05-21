@@ -2,7 +2,7 @@
   "behaviors": {
     "ExitOptionBehavior": {
       "scriptId": "51",
-      "line": 147,
+      "line": 157,
       "parentBehavior": null,
       "properties": [
         {
@@ -13,7 +13,7 @@
     },
     "StandardButtonBehavior": {
       "scriptId": "51",
-      "line": 86,
+      "line": 96,
       "parentBehavior": null,
       "properties": [
         {
@@ -56,7 +56,7 @@
     },
     "SoundButtonBehavior": {
       "scriptId": "51",
-      "line": 5,
+      "line": 3,
       "parentBehavior": null,
       "properties": [
         {
@@ -73,6 +73,10 @@
         },
         {
           "name": "isPreviousButton",
+          "type": "boolean"
+        },
+        {
+          "name": "stopOnDestroy",
           "type": "boolean"
         }
       ]
@@ -107,7 +111,7 @@
     },
     "charChoiceButtonBehavior": {
       "scriptId": "51",
-      "line": 189,
+      "line": 199,
       "parentBehavior": null,
       "properties": [
         {
@@ -130,7 +134,7 @@
     },
     "bushMenuButtonBehavior": {
       "scriptId": "51",
-      "line": 236,
+      "line": 246,
       "parentBehavior": null,
       "properties": [
         {
@@ -153,7 +157,7 @@
     },
     "warningButtonBehavior": {
       "scriptId": "51",
-      "line": 317,
+      "line": 327,
       "parentBehavior": null,
       "properties": [
         {

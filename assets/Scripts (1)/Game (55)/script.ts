@@ -32,6 +32,8 @@ var fillGaugeTime = 600;
 var bushAppearanceTime = 900;
 var goodMarks = 0
 var badMarks = 0
+var Music = 1; //First music to play
+var AllMusics=3;
 
 
 namespace Game{
@@ -46,6 +48,7 @@ namespace Game{
     Sup.getActor("GoodBar").setLocalX(-2.65);
     Sup.getActor("BadBar").setLocalX(2.65);
     Sup.getActor("Bush").setLocalX(9.5);
+    Sup.getActor("PlayTrack").getBehavior(SoundButtonBehavior).mouse("click");
     Questions.setOptionsArray();
     Questions.clearQuestion();
     Sup.setTimeout(1.5*waitTime, function(){
