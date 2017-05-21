@@ -119,6 +119,29 @@
           "type": "number"
         }
       ]
+    },
+    "bushMenuButtonBehavior": {
+      "scriptId": "51",
+      "line": 231,
+      "parentBehavior": null,
+      "properties": [
+        {
+          "name": "isHover",
+          "type": "boolean"
+        },
+        {
+          "name": "turnOffOnClickSound",
+          "type": "boolean"
+        },
+        {
+          "name": "soundToPlayOnClick",
+          "type": "string"
+        },
+        {
+          "name": "opened",
+          "type": "boolean"
+        }
+      ]
     }
   }
 }

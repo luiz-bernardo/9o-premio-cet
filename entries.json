@@ -1,5 +1,5 @@
 {
-  "nextEntryId": 132,
+  "nextEntryId": 139,
   "nodes": [
     {
       "id": "10",
@@ -290,6 +290,41 @@
         {
           "id": "127",
           "name": "PlayerLose",
+          "type": "sprite"
+        },
+        {
+          "id": "138",
+          "name": "BushMenuButton",
+          "type": "sprite"
+        },
+        {
+          "id": "132",
+          "name": "BushMenu",
+          "type": "sprite"
+        },
+        {
+          "id": "133",
+          "name": "ExitBushMenu",
+          "type": "sprite"
+        },
+        {
+          "id": "134",
+          "name": "EduBushMenu",
+          "type": "sprite"
+        },
+        {
+          "id": "135",
+          "name": "AboutBushMenu",
+          "type": "sprite"
+        },
+        {
+          "id": "136",
+          "name": "ChoiceBushMenu",
+          "type": "sprite"
+        },
+        {
+          "id": "137",
+          "name": "MenuBushMenu",
           "type": "sprite"
         }
       ]

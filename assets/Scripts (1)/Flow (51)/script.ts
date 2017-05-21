@@ -228,3 +228,85 @@ class charChoiceButtonBehavior extends Sup.Behavior {
   }
 }
 Sup.registerBehavior(charChoiceButtonBehavior);
+
+class bushMenuButtonBehavior extends Sup.Behavior {
+  // flag to tell when the mouse hover the button
+  isHover : boolean = false;
+  turnOffOnClickSound : boolean = false;
+  soundToPlayOnClick: string = "Toc";
+  opened: boolean = false;
+
+  awake() {
+    ray = new Sup.Math.Ray(this.actor.getPosition(), new Sup.Math.Vector3(0, 0, -1));
+  }
+
+  mouse(action) {
+    let xLocalStep = 0;
+    let totalMoved = 0;
+      
+    if(action == "click"){
+      if (!this.turnOffOnClickSound){
+        Sup.Audio.playSound("Sounds/"+this.soundToPlayOnClick); 
+      }
+      if(!this.opened){
+            //open menu
+            xLocalStep = ((5.32-9.5)/(60*bushAppearanceTime/1000));
+            var localMovementInterval = Sup.setInterval(timeStep, function(){
+
+                if(totalMoved > (5.32-9.5)){
+                    Sup.getActor("Bush").moveX(xLocalStep);
+                    totalMoved = totalMoved + xLocalStep;
+                }
+                else{
+                    Sup.getActor("Bush").setX(5.32);
+                    Sup.clearInterval(localMovementInterval);
+                }
+            })
+            this.opened = true;
+      }
+      else{
+          //close menu
+            xLocalStep = ((9.5-5.32)/(60*bushAppearanceTime/1000));
+            var localMovementInterval = Sup.setInterval(timeStep, function(){
+
+                if(totalMoved < (9.5-5.32)){
+                    Sup.getActor("Bush").moveX(xLocalStep);
+                    totalMoved = totalMoved + xLocalStep;
+                }
+                else{
+                    Sup.getActor("Bush").setX(9.5);
+                    Sup.clearInterval(localMovementInterval);
+                }
+            })
+          this.opened = false;
+      }
+    }
+    else if(action == "hover"){
+      this.actor.spriteRenderer.setAnimation("hover");
+    }
+    else if(action == "unhover"){
+      this.actor.spriteRenderer.setAnimation("unhover");
+    }
+  }
+
+  update() {
+    ray.setFromCamera(Sup.getActor("Camera").camera, Sup.Input.getMousePosition());
+
+    if(ray.intersectActor(this.actor, false).length > 0){
+      if(!this.isHover){
+        this.mouse("hover");
+        this.isHover = true;
+      }
+      if(Sup.Input.wasMouseButtonJustPressed(0)){
+        this.mouse("click")
+      }
+    }
+    else if(this.isHover){
+      this.isHover = false;
+      this.mouse("unhover")
+    }
+
+  }
+}
+Sup.registerBehavior(bushMenuButtonBehavior);
+

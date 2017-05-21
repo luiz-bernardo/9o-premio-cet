@@ -1,0 +1,29 @@
+{
+  "formatVersion": 3,
+  "maps": [
+    "map"
+  ],
+  "filtering": "pixelated",
+  "wrapping": "clampToEdge",
+  "pixelsPerUnit": 100,
+  "framesPerSecond": 60,
+  "opacity": null,
+  "alphaTest": 0.6,
+  "frameOrder": "rows",
+  "grid": {
+    "width": 395,
+    "height": 768
+  },
+  "origin": {
+    "x": 0.6154999999999999,
+    "y": 0.5
+  },
+  "animations": [],
+  "mapSlots": {
+    "map": "map",
+    "light": null,
+    "specular": null,
+    "alpha": null,
+    "normal": null
+  }
+}
