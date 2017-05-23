@@ -1,5 +1,5 @@
 {
-  "nextEntryId": 142,
+  "nextEntryId": 154,
   "nodes": [
     {
       "id": "10",
@@ -34,6 +34,11 @@
         {
           "id": "128",
           "name": "PlayerWin",
+          "type": "scene"
+        },
+        {
+          "id": "144",
+          "name": "PlayerWinSoMuch",
           "type": "scene"
         },
         {
@@ -194,6 +199,11 @@
           "id": "120",
           "name": "About2Screen",
           "type": "sprite"
+        },
+        {
+          "id": "142",
+          "name": "Star",
+          "type": "sprite"
         }
       ]
     },
@@ -298,6 +308,11 @@
           "type": "sprite"
         },
         {
+          "id": "143",
+          "name": "PlayerWinSoMuch",
+          "type": "sprite"
+        },
+        {
           "id": "132",
           "name": "BushMenu",
           "type": "sprite"
@@ -342,6 +357,51 @@
         {
           "id": "16",
           "name": "Toc",
+          "type": "sound"
+        },
+        {
+          "id": "145",
+          "name": "click4",
+          "type": "sound"
+        },
+        {
+          "id": "146",
+          "name": "message",
+          "type": "sound"
+        },
+        {
+          "id": "147",
+          "name": "stomach",
+          "type": "sound"
+        },
+        {
+          "id": "148",
+          "name": "gabriela",
+          "type": "sound"
+        },
+        {
+          "id": "149",
+          "name": "plaster",
+          "type": "sound"
+        },
+        {
+          "id": "152",
+          "name": "rainbow",
+          "type": "sound"
+        },
+        {
+          "id": "150",
+          "name": "chri",
+          "type": "sound"
+        },
+        {
+          "id": "153",
+          "name": "win",
+          "type": "sound"
+        },
+        {
+          "id": "151",
+          "name": "nena",
           "type": "sound"
         },
         {

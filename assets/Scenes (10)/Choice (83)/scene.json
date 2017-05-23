@@ -68,6 +68,14 @@
             "formatVersion": 1
           },
           "id": "0"
+        },
+        {
+          "type": "Behavior",
+          "config": {
+            "behaviorName": "choiceScreenBehavior",
+            "propertyValues": {}
+          },
+          "id": "1"
         }
       ],
       "position": {
@@ -157,7 +165,52 @@
                 {
                   "id": "56",
                   "name": "Motorcyclist",
-                  "children": [],
+                  "children": [
+                    {
+                      "id": "60",
+                      "name": "Star3",
+                      "children": [],
+                      "components": [
+                        {
+                          "type": "SpriteRenderer",
+                          "config": {
+                            "formatVersion": 1,
+                            "spriteAssetId": "142",
+                            "animationId": null,
+                            "horizontalFlip": false,
+                            "verticalFlip": false,
+                            "castShadow": false,
+                            "receiveShadow": false,
+                            "color": "ffffff",
+                            "overrideOpacity": false,
+                            "opacity": null,
+                            "materialType": "basic",
+                            "shaderAssetId": null
+                          },
+                          "id": "0"
+                        }
+                      ],
+                      "position": {
+                        "x": 0,
+                        "y": 1.6,
+                        "z": 1
+                      },
+                      "orientation": {
+                        "x": 0,
+                        "y": -0.00872653512987063,
+                        "z": 0,
+                        "w": 0.9999619268083657
+                      },
+                      "scale": {
+                        "x": 1.000000014962205,
+                        "y": 1,
+                        "z": 1.000000014962205
+                      },
+                      "visible": false,
+                      "layer": 0,
+                      "prefab": null
+                    }
+                  ],
                   "components": [
                     {
                       "type": "SpriteRenderer",
@@ -208,6 +261,50 @@
                     "z": 1
                   },
                   "visible": true,
+                  "layer": 0,
+                  "prefab": null
+                },
+                {
+                  "id": "58",
+                  "name": "Star1",
+                  "children": [],
+                  "components": [
+                    {
+                      "type": "SpriteRenderer",
+                      "config": {
+                        "formatVersion": 1,
+                        "spriteAssetId": "142",
+                        "animationId": null,
+                        "horizontalFlip": false,
+                        "verticalFlip": false,
+                        "castShadow": false,
+                        "receiveShadow": false,
+                        "color": "ffffff",
+                        "overrideOpacity": false,
+                        "opacity": null,
+                        "materialType": "basic",
+                        "shaderAssetId": null
+                      },
+                      "id": "0"
+                    }
+                  ],
+                  "position": {
+                    "x": 0,
+                    "y": 1.6,
+                    "z": 1
+                  },
+                  "orientation": {
+                    "x": 0,
+                    "y": -0.00872653512987063,
+                    "z": 0,
+                    "w": 0.9999619268083657
+                  },
+                  "scale": {
+                    "x": 1.000000014962205,
+                    "y": 1,
+                    "z": 1.000000014962205
+                  },
+                  "visible": false,
                   "layer": 0,
                   "prefab": null
                 }
@@ -264,6 +361,50 @@
               "visible": true,
               "layer": 0,
               "prefab": null
+            },
+            {
+              "id": "59",
+              "name": "Star2",
+              "children": [],
+              "components": [
+                {
+                  "type": "SpriteRenderer",
+                  "config": {
+                    "formatVersion": 1,
+                    "spriteAssetId": "142",
+                    "animationId": null,
+                    "horizontalFlip": false,
+                    "verticalFlip": false,
+                    "castShadow": false,
+                    "receiveShadow": false,
+                    "color": "ffffff",
+                    "overrideOpacity": false,
+                    "opacity": null,
+                    "materialType": "basic",
+                    "shaderAssetId": null
+                  },
+                  "id": "0"
+                }
+              ],
+              "position": {
+                "x": 0,
+                "y": 1.6,
+                "z": 1
+              },
+              "orientation": {
+                "x": 0,
+                "y": -0.00872653512987063,
+                "z": 0,
+                "w": 0.9999619268083657
+              },
+              "scale": {
+                "x": 1.000000014962205,
+                "y": 1,
+                "z": 1.000000014962205
+              },
+              "visible": false,
+              "layer": 0,
+              "prefab": null
             }
           ],
           "components": [
@@ -316,6 +457,50 @@
             "z": 1
           },
           "visible": true,
+          "layer": 0,
+          "prefab": null
+        },
+        {
+          "id": "57",
+          "name": "Star0",
+          "children": [],
+          "components": [
+            {
+              "type": "SpriteRenderer",
+              "config": {
+                "formatVersion": 1,
+                "spriteAssetId": "142",
+                "animationId": null,
+                "horizontalFlip": false,
+                "verticalFlip": false,
+                "castShadow": false,
+                "receiveShadow": false,
+                "color": "ffffff",
+                "overrideOpacity": false,
+                "opacity": null,
+                "materialType": "basic",
+                "shaderAssetId": null
+              },
+              "id": "0"
+            }
+          ],
+          "position": {
+            "x": 0,
+            "y": 1.6,
+            "z": 1
+          },
+          "orientation": {
+            "x": 0,
+            "y": -0.008726535498373935,
+            "z": 0,
+            "w": 0.9999619230641713
+          },
+          "scale": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          },
+          "visible": false,
           "layer": 0,
           "prefab": null
         }

@@ -15,9 +15,20 @@ class NextSignBehavior extends Sup.Behavior {
             Game.nextTurn();
         }
         else if(winOrLose>0){
-            Sup.loadScene("Scenes/PlayerWin");
+            if(starredPlayers>=4){
+                inGameMusicPlayer.stop
+                Sup.Audio.playSound("Sounds/rainbow"); 
+                Sup.loadScene("Scenes/PlayerWinSoMuch");
+            }
+            else{
+                inGameMusicPlayer.stop
+                Sup.Audio.playSound("Sounds/win"); 
+                Sup.loadScene("Scenes/PlayerWin");   
+            }
         }
         else if(winOrLose<0){
+            inGameMusicPlayer.stop
+            Sup.Audio.playSound("Sounds/nena"); 
             Sup.loadScene("Scenes/PlayerLose");
         }
     }
@@ -151,11 +162,13 @@ namespace Questions {
         //right answer
         if(selectedOption === rightOption){
           SetSign("Right");
+          Sup.Audio.playSound("Sounds/gabriela"); 
           gaugeToFill = "good";
         }
         //wrong answer
         else{
           SetSign("Wrong");
+          Sup.Audio.playSound("Sounds/stomach"); 
           gaugeToFill = "bad";
         }
     })
@@ -163,6 +176,7 @@ namespace Questions {
     //Reveals right and wrong answers after the sign shows up
     Sup.setTimeout(RightTime+0.5*waitTime, function(){
         Sup.getActor("RightChalk").setVisible(true);
+        Sup.Audio.playSound("Sounds/chri"); 
         Game.scoreMark(gaugeToFill);
         Sup.setTimeout(waitTime, function(){
             clearOptionsArray();

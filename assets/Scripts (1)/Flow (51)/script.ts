@@ -1,6 +1,3 @@
-
-let inGameMusicPlayer = new Sup.Audio.SoundPlayer("Sounds/Music"+Music, 1.0);
-
 class SoundButtonBehavior extends Sup.Behavior {
   // flag to tell when the mouse hover the button
   isHover : boolean = false;
@@ -98,7 +95,9 @@ class StandardButtonBehavior extends Sup.Behavior {
   // flag to tell when the mouse hover the button
   isHover : boolean = false;
   turnOffOnClickSound : boolean = false;
-  soundToPlayOnClick: string = "Toc";
+  soundToPlayOnClick: string = "click4";
+  turnOffHoverSound : boolean = false;
+  soundToPlayHover: string = "plaster";
   turnOffLoadScene: boolean = false;
   sceneToLoad: string = "Menu";
   turnOnCameraMove: boolean = false;
@@ -127,6 +126,9 @@ class StandardButtonBehavior extends Sup.Behavior {
       }
     }
     else if(action == "hover"){
+      if (!this.turnOffHoverSound){
+        Sup.Audio.playSound("Sounds/"+this.soundToPlayHover); 
+      }
       this.actor.spriteRenderer.setAnimation("hover");
     }
     else if(action == "unhover"){
@@ -158,6 +160,10 @@ Sup.registerBehavior(StandardButtonBehavior);
 class ExitOptionBehavior extends Sup.Behavior {
   // flag to tell when the mouse hover the button
   isHover : boolean = false;
+  turnOffOnClickSound : boolean = false;
+  soundToPlayOnClick: string = "click4";
+  turnOffHoverSound : boolean = false;
+  soundToPlayHover: string = "plaster";
 
   awake() {
     ray = new Sup.Math.Ray(this.actor.getPosition(), new Sup.Math.Vector3(0, 0, -1));
@@ -165,10 +171,15 @@ class ExitOptionBehavior extends Sup.Behavior {
 
   mouse(action) {
     if(action == "click"){
-      Sup.Audio.playSound("Sounds/Toc");
+      if (!this.turnOffOnClickSound){
+        Sup.Audio.playSound("Sounds/"+this.soundToPlayOnClick); 
+      }
       Sup.exit();
     }
     else if(action == "hover"){
+      if (!this.turnOffHoverSound){
+        Sup.Audio.playSound("Sounds/"+this.soundToPlayHover); 
+      }
       this.actor.spriteRenderer.setAnimation("hover");
     }
     else if(action == "unhover"){
@@ -197,11 +208,23 @@ class ExitOptionBehavior extends Sup.Behavior {
 }
 Sup.registerBehavior(ExitOptionBehavior);
 
+class choiceScreenBehavior extends Sup.Behavior {
+
+  awake() {
+        PrepareChoiceScreen();
+  }
+
+}
+Sup.registerBehavior(choiceScreenBehavior);
+
+
 class charChoiceButtonBehavior extends Sup.Behavior {
   // flag to tell when the mouse hover the button
   isHover : boolean = false;
   turnOffOnClickSound : boolean = false;
-  soundToPlayOnClick: string = "Toc";
+  soundToPlayOnClick: string = "click4";
+  turnOffHoverSound : boolean = false;
+  soundToPlayHover: string = "plaster";
   characterNumber: number=0;
 
   awake() {
@@ -216,6 +239,9 @@ class charChoiceButtonBehavior extends Sup.Behavior {
       Game.startGame(this.characterNumber);
     }
     else if(action == "hover"){
+      if (!this.turnOffHoverSound){
+        Sup.Audio.playSound("Sounds/"+this.soundToPlayHover); 
+      }
       this.actor.spriteRenderer.setAnimation("hover");
     }
     else if(action == "unhover"){
@@ -248,7 +274,9 @@ class bushMenuButtonBehavior extends Sup.Behavior {
   // flag to tell when the mouse hover the button
   isHover : boolean = false;
   turnOffOnClickSound : boolean = false;
-  soundToPlayOnClick: string = "Toc";
+  soundToPlayOnClick: string = "click4";
+  turnOffHoverSound : boolean = false;
+  soundToPlayHover: string = "plaster";
   opened: boolean = false;
 
   awake() {
@@ -297,6 +325,9 @@ class bushMenuButtonBehavior extends Sup.Behavior {
       }
     }
     else if(action == "hover"){
+      if (!this.turnOffHoverSound){
+        Sup.Audio.playSound("Sounds/"+this.soundToPlayHover); 
+      }
       this.actor.spriteRenderer.setAnimation("hover");
     }
     else if(action == "unhover"){
@@ -329,7 +360,9 @@ class warningButtonBehavior extends Sup.Behavior {
   // flag to tell when the mouse hover the button
   isHover : boolean = false;
   turnOffOnClickSound : boolean = false;
-  soundToPlayOnClick: string = "Toc";
+  soundToPlayOnClick: string = "click4";
+  turnOffHoverSound : boolean = false;
+  soundToPlayHover: string = "plaster";
   whereToSend: string = "Menu";
 
   awake() {
@@ -349,6 +382,9 @@ class warningButtonBehavior extends Sup.Behavior {
         }
     }
     else if(action == "hover"){
+      if (!this.turnOffHoverSound){
+        Sup.Audio.playSound("Sounds/"+this.soundToPlayHover); 
+      }
       this.actor.spriteRenderer.setAnimation("hover");
     }
     else if(action == "unhover"){

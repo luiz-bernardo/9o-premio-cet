@@ -1197,6 +1197,10 @@
                   "whereToGoAfter": {
                     "type": "string",
                     "value": "Menu"
+                  },
+                  "soundToPlayOnClick": {
+                    "type": "string",
+                    "value": "message"
                   }
                 }
               },
@@ -1270,6 +1274,10 @@
                   "whereToGoAfter": {
                     "type": "string",
                     "value": "Choice"
+                  },
+                  "soundToPlayOnClick": {
+                    "type": "string",
+                    "value": "message"
                   }
                 }
               },
@@ -1473,6 +1481,10 @@
                   "whereToGoAfter": {
                     "type": "string",
                     "value": "ExitGame"
+                  },
+                  "soundToPlayOnClick": {
+                    "type": "string",
+                    "value": "message"
                   }
                 }
               },
@@ -1537,50 +1549,6 @@
         "z": 1
       },
       "visible": true,
-      "layer": 0,
-      "prefab": null
-    },
-    {
-      "id": "54",
-      "name": "reference",
-      "children": [],
-      "components": [
-        {
-          "type": "SpriteRenderer",
-          "config": {
-            "formatVersion": 1,
-            "spriteAssetId": "22",
-            "animationId": null,
-            "horizontalFlip": false,
-            "verticalFlip": false,
-            "castShadow": false,
-            "receiveShadow": false,
-            "color": "ffffff",
-            "overrideOpacity": false,
-            "opacity": null,
-            "materialType": "basic",
-            "shaderAssetId": null
-          },
-          "id": "0"
-        }
-      ],
-      "position": {
-        "x": 0,
-        "y": -2,
-        "z": 10
-      },
-      "orientation": {
-        "x": 0,
-        "y": 0,
-        "z": 0,
-        "w": 1
-      },
-      "scale": {
-        "x": 1,
-        "y": 1,
-        "z": 1
-      },
-      "visible": false,
       "layer": 0,
       "prefab": null
     },
