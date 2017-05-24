@@ -2,7 +2,7 @@
   "behaviors": {
     "ExitOptionBehavior": {
       "scriptId": "51",
-      "line": 159,
+      "line": 162,
       "parentBehavior": null,
       "properties": [
         {
@@ -29,7 +29,7 @@
     },
     "StandardButtonBehavior": {
       "scriptId": "51",
-      "line": 93,
+      "line": 96,
       "parentBehavior": null,
       "properties": [
         {
@@ -107,13 +107,13 @@
     },
     "QuestionBehavior": {
       "scriptId": "54",
-      "line": 190,
+      "line": 192,
       "parentBehavior": null,
       "properties": []
     },
     "TextBehavior": {
       "scriptId": "54",
-      "line": 290,
+      "line": 292,
       "parentBehavior": null,
       "properties": [
         {
@@ -135,7 +135,7 @@
     },
     "charChoiceButtonBehavior": {
       "scriptId": "51",
-      "line": 220,
+      "line": 232,
       "parentBehavior": null,
       "properties": [
         {
@@ -166,7 +166,7 @@
     },
     "bushMenuButtonBehavior": {
       "scriptId": "51",
-      "line": 272,
+      "line": 284,
       "parentBehavior": null,
       "properties": [
         {
@@ -197,7 +197,7 @@
     },
     "warningButtonBehavior": {
       "scriptId": "51",
-      "line": 358,
+      "line": 370,
       "parentBehavior": null,
       "properties": [
         {
@@ -228,9 +228,30 @@
     },
     "choiceScreenBehavior": {
       "scriptId": "51",
-      "line": 210,
+      "line": 213,
       "parentBehavior": null,
       "properties": []
+    },
+    "soundStopBehavior": {
+      "scriptId": "51",
+      "line": 223,
+      "parentBehavior": null,
+      "properties": []
+    },
+    "animatedBackgroundBehavior": {
+      "scriptId": "55",
+      "line": 175,
+      "parentBehavior": null,
+      "properties": [
+        {
+          "name": "xLocalStep",
+          "type": "number"
+        },
+        {
+          "name": "totalMoved",
+          "type": "number"
+        }
+      ]
     }
   }
 }

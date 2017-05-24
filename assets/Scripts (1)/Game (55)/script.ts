@@ -1,38 +1,40 @@
 var ray = new Sup.Math.Ray;
 
+var timeBase = 100
 //Signs and its data about movement to show
-var RightTime = 650
+var RightTime = 6.5*timeBase;
 var RightInitialXPos = -2
 var RightInitialZDegree = -70
 var RightFinalXPos = -5.22
 
-var WrongTime = 650
+var WrongTime = 6.5*timeBase;
 var WrongInitialXPos = 3.4
 var WrongInitialZDegree = -55
 var WrongFinalXPos = 5.27
 
-var QuestionTime = 550
+var QuestionTime = 5.5*timeBase;
 var QuestionInitialXPos = 8
 var QuestionInitialZDegree = -20
 var QuestionFinalXPos = 0
 
-var NextTime = 450
+var NextTime = 4.5*timeBase;
 var NextInitialXPos = 5.5
 var NextInitialZDegree = -30
 var NextFinalXPos = 3.65
 
 //Time related variables
-var timeStep = 1000/60
-var waitTime = 400;
-var fillGaugeTime = 600;
-var bushAppearanceTime = 900;
+var timeStep = 1000/40;
+var waitTime = 4*timeBase;
+var fillGaugeTime = 6*timeBase;
+var bushAppearanceTime = 9*timeBase;
+var backgroundPeriod = 15000;
 
 //Question and characters related variables
 var questionNumber = 0;
 var questionsToWin = 3;
 
 //Music and sound related variables
-var Music = 1; //First music to play
+var Music = 1;  //First music to play
 var AllMusics=3;
 let inGameMusicPlayer = new Sup.Audio.SoundPlayer("Sounds/Music"+Music, 1.0);
 
@@ -62,6 +64,7 @@ namespace Game{
     Sup.getActor("GoodBar").setLocalX(-2.65);
     Sup.getActor("BadBar").setLocalX(2.65);
     Sup.getActor("Bush").setLocalX(9.5);
+    Sup.getActor("AnimatedBackground").setX(-6.86);
     Sup.getActor("PlayTrack").getBehavior(SoundButtonBehavior).automaticPlay();
     Questions.setOptionsArray();
     Questions.clearQuestion();
@@ -84,7 +87,7 @@ namespace Game{
       let totalMoved = 0;
       if(type == "good"){
             posLocalX = Sup.getActor("GoodBar").getLocalX();
-            xLocalStep = ((2.65/questionsToWin)/(60*fillGaugeTime/1000));
+            xLocalStep = ((2.65/questionsToWin)/(fillGaugeTime/timeStep));
             var localMovementInterval = Sup.setInterval(timeStep, function(){
 
                 if(totalMoved < (2.65/questionsToWin)){
@@ -100,7 +103,7 @@ namespace Game{
       }
       else if(type == "bad"){
             posLocalX = Sup.getActor("BadBar").getLocalX();
-            xLocalStep = (-(2.65/questionsToWin))/(60*fillGaugeTime/1000);
+            xLocalStep = (-(2.65/questionsToWin))/(fillGaugeTime/timeStep);
             var localMovementInterval = Sup.setInterval(timeStep, function(){
 
                 if(totalMoved > -(2.65/questionsToWin)){
@@ -149,10 +152,10 @@ function MoveObject(nameActor: string, movementTime : number, degrees : number, 
 
     var radiansFinal = Sup.Math.toRadians(degrees);
     var radians = radiansFinal-Sup.getActor(nameActor).getEulerZ();
-    var radianStep = (1000/60)*radians/movementTime;
+    var radianStep = (timeStep)*radians/movementTime;
 
     if(moveX){
-        xStep = (endingX-Sup.getActor(nameActor).getX())/(60*movementTime/1000);
+        xStep = (endingX-Sup.getActor(nameActor).getX())/(movementTime/timeStep);
     }
 
     var movementInterval = Sup.setInterval(timeStep, function(){
@@ -169,3 +172,31 @@ function MoveObject(nameActor: string, movementTime : number, degrees : number, 
         }
     })
 }
+
+class animatedBackgroundBehavior extends Sup.Behavior {
+  // flag to tell when the mouse hover the button
+
+      
+    xLocalStep: number= 0;
+    totalMoved: number = 0;
+    
+  awake(){
+
+    this.xLocalStep = ((-59.94+6.86)/(backgroundPeriod/timeStep));
+        
+  }  
+    
+  update(){
+
+        if(this.totalMoved > (-59.94+6.86)){
+            Sup.getActor("AnimatedBackground").moveX(this.xLocalStep);
+            this.totalMoved = this.totalMoved + this.xLocalStep;
+        }
+        else{
+            Sup.getActor("AnimatedBackground").setX(-6.86);
+            this.totalMoved = 0;
+        }
+  }
+
+}
+Sup.registerBehavior(animatedBackgroundBehavior);

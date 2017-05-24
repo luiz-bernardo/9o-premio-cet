@@ -13,12 +13,13 @@ class SoundButtonBehavior extends Sup.Behavior {
     
   onDestroy(){
       if(this.stopOnDestroy){
-          inGameMusicPlayer.stop
+          inGameMusicPlayer.stop()
       }
   }
     
   automaticPlay(){
       inGameMusicPlayer.play();
+      inGameMusicPlayer.setLoop(true);
       this.actor.spriteRenderer.setSprite("GameSprites/PauseButton");
   }
 
@@ -32,6 +33,7 @@ class SoundButtonBehavior extends Sup.Behavior {
             }
             else{
               inGameMusicPlayer.play();
+              inGameMusicPlayer.setLoop(true);
               this.actor.spriteRenderer.setSprite("GameSprites/PauseButton");
               this.actor.spriteRenderer.setAnimation("hover");
             }        
@@ -46,6 +48,7 @@ class SoundButtonBehavior extends Sup.Behavior {
             inGameMusicPlayer.stop();
             inGameMusicPlayer = new Sup.Audio.SoundPlayer("Sounds/Music"+Music, 1.0);
             inGameMusicPlayer.play();
+            inGameMusicPlayer.setLoop(true);
             Sup.getActor("PlayTrack").spriteRenderer.setSprite("GameSprites/PauseButton");
         }
         if(this.isPreviousButton){
@@ -58,6 +61,7 @@ class SoundButtonBehavior extends Sup.Behavior {
             inGameMusicPlayer.stop();
             inGameMusicPlayer = new Sup.Audio.SoundPlayer("Sounds/Music"+Music, 1.0);
             inGameMusicPlayer.play();
+            inGameMusicPlayer.setLoop(true);
             Sup.getActor("PlayTrack").spriteRenderer.setSprite("GameSprites/PauseButton");
         }
     }
@@ -85,7 +89,6 @@ class SoundButtonBehavior extends Sup.Behavior {
       this.isHover = false;
       this.mouse("unhover")
     }
-
   }
 }
 Sup.registerBehavior(SoundButtonBehavior);
@@ -218,6 +221,15 @@ class choiceScreenBehavior extends Sup.Behavior {
 Sup.registerBehavior(choiceScreenBehavior);
 
 
+class soundStopBehavior extends Sup.Behavior {
+
+  awake() {
+        inGameMusicPlayer.stop();
+  }
+}
+Sup.registerBehavior(soundStopBehavior);
+
+
 class charChoiceButtonBehavior extends Sup.Behavior {
   // flag to tell when the mouse hover the button
   isHover : boolean = false;
@@ -293,7 +305,7 @@ class bushMenuButtonBehavior extends Sup.Behavior {
       }
       if(!this.opened){
             //open menu
-            xLocalStep = ((5.32-9.5)/(60*bushAppearanceTime/1000));
+            xLocalStep = ((5.32-9.5)/(bushAppearanceTime/timeStep));
             var localMovementInterval = Sup.setInterval(timeStep, function(){
 
                 if(totalMoved > (5.32-9.5)){
@@ -309,7 +321,7 @@ class bushMenuButtonBehavior extends Sup.Behavior {
       }
       else{
           //close menu
-            xLocalStep = ((9.5-5.32)/(60*bushAppearanceTime/1000));
+            xLocalStep = ((9.5-5.32)/(bushAppearanceTime/timeStep));
             var localMovementInterval = Sup.setInterval(timeStep, function(){
 
                 if(totalMoved < (9.5-5.32)){

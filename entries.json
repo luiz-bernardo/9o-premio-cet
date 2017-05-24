@@ -1,5 +1,5 @@
 {
-  "nextEntryId": 154,
+  "nextEntryId": 156,
   "nodes": [
     {
       "id": "10",
@@ -345,6 +345,16 @@
         {
           "id": "139",
           "name": "Warning",
+          "type": "sprite"
+        },
+        {
+          "id": "154",
+          "name": "AnimatedBackground",
+          "type": "sprite"
+        },
+        {
+          "id": "155",
+          "name": "GameName",
           "type": "sprite"
         }
       ]

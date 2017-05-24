@@ -16,8 +16,10 @@ class NextSignBehavior extends Sup.Behavior {
         }
         else if(winOrLose>0){
             if(starredPlayers>=4){
-                inGameMusicPlayer.stop
-                Sup.Audio.playSound("Sounds/rainbow"); 
+                inGameMusicPlayer.stop()
+                inGameMusicPlayer = new Sup.Audio.SoundPlayer("Sounds/Music"+Music, 1.0);
+                inGameMusicPlayer.setLoop(true);
+                inGameMusicPlayer.play(); 
                 Sup.loadScene("Scenes/PlayerWinSoMuch");
             }
             else{
@@ -265,10 +267,10 @@ function RotateMoveObject(nameActor: string, movementTime : number, degrees : nu
 
     var radiansFinal = Sup.Math.toRadians(degrees);
     var radians = radiansFinal-Sup.getActor(nameActor).getEulerZ();
-    var radianStep = (1000/60)*radians/movementTime;
+    var radianStep = (timeStep)*radians/movementTime;
 
     if(moveX){
-        xStep = (endingX-Sup.getActor(nameActor).getX())/(60*movementTime/1000);
+        xStep = (endingX-Sup.getActor(nameActor).getX())/(movementTime/timeStep);
     }
 
     var movementInterval = Sup.setInterval(timeStep, function(){

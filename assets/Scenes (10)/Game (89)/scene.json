@@ -47,14 +47,15 @@
       "prefab": null
     },
     {
-      "id": "1",
-      "name": "Background",
+      "id": "84",
+      "name": "AnimatedBackground",
       "children": [],
       "components": [
         {
           "type": "SpriteRenderer",
           "config": {
-            "spriteAssetId": "98",
+            "formatVersion": 1,
+            "spriteAssetId": "154",
             "animationId": null,
             "horizontalFlip": false,
             "verticalFlip": false,
@@ -64,16 +65,67 @@
             "overrideOpacity": false,
             "opacity": null,
             "materialType": "basic",
-            "shaderAssetId": null,
-            "formatVersion": 1
+            "shaderAssetId": null
           },
           "id": "0"
+        },
+        {
+          "type": "Behavior",
+          "config": {
+            "behaviorName": "animatedBackgroundBehavior",
+            "propertyValues": {}
+          },
+          "id": "1"
         }
       ],
       "position": {
-        "x": 0,
+        "x": -6.86,
         "y": 0,
         "z": 0
+      },
+      "orientation": {
+        "x": 0,
+        "y": 0,
+        "z": 0,
+        "w": 1
+      },
+      "scale": {
+        "x": 1,
+        "y": 1,
+        "z": 1
+      },
+      "visible": true,
+      "layer": 0,
+      "prefab": null
+    },
+    {
+      "id": "85",
+      "name": "GameName",
+      "children": [],
+      "components": [
+        {
+          "type": "SpriteRenderer",
+          "config": {
+            "formatVersion": 1,
+            "spriteAssetId": "155",
+            "animationId": null,
+            "horizontalFlip": false,
+            "verticalFlip": false,
+            "castShadow": false,
+            "receiveShadow": false,
+            "color": "ffffff",
+            "overrideOpacity": false,
+            "opacity": null,
+            "materialType": "basic",
+            "shaderAssetId": null
+          },
+          "id": "1"
+        }
+      ],
+      "position": {
+        "x": 0.04,
+        "y": 3.065,
+        "z": 1
       },
       "orientation": {
         "x": 0,
@@ -181,10 +233,6 @@
                 "behaviorName": "SoundButtonBehavior",
                 "propertyValues": {
                   "isPlayButton": {
-                    "type": "boolean",
-                    "value": true
-                  },
-                  "stopOnDestroy": {
                     "type": "boolean",
                     "value": true
                   }
